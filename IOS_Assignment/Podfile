@@ -6,5 +6,5 @@ target 'IOS_Assignment' do
   use_frameworks!
 
   # Pods for IOS_Assignment
-
+pod 'Firebase/Auth'
 end
