@@ -9,17 +9,8 @@ import  UIKit
 import Foundation
 
 struct Cart {
-    var item:String
-    var detail:String
+    var item : String?
+    var detail : String?
 }
 
-
-
-struct FoodItem {
-    var foodImage: UIImage
-    var foodName: String
-    var foodDescription: String
-    var foodPrice: Float
-    var distance: Int
-}
 

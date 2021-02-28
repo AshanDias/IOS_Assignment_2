@@ -7,54 +7,60 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController ,UITableViewDelegate, UITableViewDataSource{
+  
 
     @IBOutlet weak var uiTable: UITableView!
     
-    let items = [
+    let healthyFoods = [
+            [
+                "name":"Apple",
+                "price":"100.00"
+            ],
+            [
+                "name":"Orange",
+                "price":"50.00"
+            ],
+            [
+                "name":"Pear",
+                "price":"60.00"
+            ],
+            [
+                "name":"Grapefruit",
+                "price":"100.00"
+            ],
+            [
+                "name":"Potato",
+                "price":"30.00"
+            ],
+            [
+                "name":"Tomato",
+                "price":"40.00"
+            ]
+            
+        ];
     
-        Cart(item: "Cake", detail: "100"),
-        Cart(item: "Biscuit", detail: "200"),
-        Cart(item: "Cake", detail: "100"),
-        Cart(item: "Biscuit", detail: "200"),   Cart(item: "Cake", detail: "100"),
-        Cart(item: "Biscuit", detail: "200"),   Cart(item: "Cake", detail: "100"),
-        Cart(item: "Biscuit", detail: "200"),   Cart(item: "Cake", detail: "100"),
-        Cart(item: "Biscuit", detail: "200"),   Cart(item: "Cake", detail: "100"),
-        Cart(item: "Biscuit", detail: "200"),   Cart(item: "Cake", detail: "100"),
-        Cart(item: "Biscuit", detail: "200"),   Cart(item: "Cake", detail: "100"),
-        Cart(item: "Biscuit", detail: "200"),   Cart(item: "Cake", detail: "100"),
-        Cart(item: "Biscuit", detail: "200"),
-    ]
     override func viewDidLoad() {
         super.viewDidLoad()
+        uiTable.register(CartTableViewCell.self, forCellReuseIdentifier: "CartTableViewCell")
+
         self.uiTable.dataSource = self
            self.uiTable.delegate = self
-        uiTable.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-      
-    }
-    
-
-
-}
-
-
-extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        4
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("jelllow",items.count)
-        return items.count
-        
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
      
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
-           let object = items[indexPath.row]
-                cell.textLabel?.text = object.item
-        cell.textLabel?.text=object.detail
-           return cell
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return healthyFoods.count;
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CartTableViewCell", for: indexPath) as! CartTableViewCell
+        cell.textLabel?.text = healthyFoods[indexPath.row]["name"];
+        cell.price.text = healthyFoods[indexPath.row]["price"];
+        return cell
+    }
+    
+
+   
 }
+
