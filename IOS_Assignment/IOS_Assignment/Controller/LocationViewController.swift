@@ -6,15 +6,15 @@
 //
 
 import UIKit
-
 class LocationViewController: UIViewController {
 
     @IBOutlet weak var locationButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupButtonStyle();
-        // Do any additional setup after loading the view.
+      
     }
+    
     
     func setupButtonStyle(){
     
