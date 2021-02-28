@@ -28,23 +28,6 @@ class DashboardViewController: UIViewController {
     }
 }
 
-
-    extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            print("jelllow",items.count)
-            return items.count
-            
-        }
-
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = uiTable.dequeueReusableCell(withIdentifier: XIBIdentifiers.XIB_FOOD_CELL, for: indexPath) as! CartItemCell
-               //cell.selectionStyle = .none
-            cell.setupView(cart:  items[indexPath.row])
-            print("jelllow",cell)
-            return cell
-        }
-    }
-    
   
 
     
