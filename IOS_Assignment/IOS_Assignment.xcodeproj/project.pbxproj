@@ -17,6 +17,9 @@
 		9849918B25E22F3F00CD4C63 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9849918A25E22F3F00CD4C63 /* GoogleService-Info.plist */; };
 		98990F7425EB5D87006E37DF /* icons8-kitchen-room-96.png in Resources */ = {isa = PBXBuildFile; fileRef = 98990F7325EB5D87006E37DF /* icons8-kitchen-room-96.png */; };
 		98990F7C25EB63FB006E37DF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98990F7B25EB63FB006E37DF /* SignUpViewController.swift */; };
+		98990F7F25EB71FC006E37DF /* pin2x-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 98990F7E25EB71FC006E37DF /* pin2x-1.png */; };
+		98990F8725EB73D1006E37DF /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98990F8625EB73D1006E37DF /* LocationViewController.swift */; };
+		98990F8A25EB780F006E37DF /* layer-211@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 98990F8925EB780F006E37DF /* layer-211@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		9849918A25E22F3F00CD4C63 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		98990F7325EB5D87006E37DF /* icons8-kitchen-room-96.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-kitchen-room-96.png"; sourceTree = "<group>"; };
 		98990F7B25EB63FB006E37DF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		98990F7E25EB71FC006E37DF /* pin2x-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pin2x-1.png"; sourceTree = "<group>"; };
+		98990F8625EB73D1006E37DF /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		98990F8925EB780F006E37DF /* layer-211@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "layer-211@2x.png"; sourceTree = "<group>"; };
 		D3122F9D4DB77C72BBD873B6 /* Pods-IOS_Assignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOS_Assignment.release.xcconfig"; path = "Target Support Files/Pods-IOS_Assignment/Pods-IOS_Assignment.release.xcconfig"; sourceTree = "<group>"; };
 		D91942043B54F85CF3B641D9 /* Pods_IOS_Assignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOS_Assignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0A1EAB5E4C9EB130ABA871D /* Pods-IOS_Assignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOS_Assignment.debug.xcconfig"; path = "Target Support Files/Pods-IOS_Assignment/Pods-IOS_Assignment.debug.xcconfig"; sourceTree = "<group>"; };
@@ -83,6 +89,8 @@
 				9849917125E2187500CD4C63 /* AppDelegate.swift */,
 				9849917325E2187500CD4C63 /* SceneDelegate.swift */,
 				9849917A25E2187500CD4C63 /* Assets.xcassets */,
+				98990F8925EB780F006E37DF /* layer-211@2x.png */,
+				98990F7E25EB71FC006E37DF /* pin2x-1.png */,
 				98990F7325EB5D87006E37DF /* icons8-kitchen-room-96.png */,
 				9849917F25E2187500CD4C63 /* Info.plist */,
 				9849918A25E22F3F00CD4C63 /* GoogleService-Info.plist */,
@@ -111,6 +119,7 @@
 				9849917525E2187500CD4C63 /* ViewController.swift */,
 				9849917725E2187500CD4C63 /* Main.storyboard */,
 				98990F7B25EB63FB006E37DF /* SignUpViewController.swift */,
+				98990F8625EB73D1006E37DF /* LocationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -187,7 +196,9 @@
 				98990F7425EB5D87006E37DF /* icons8-kitchen-room-96.png in Resources */,
 				9849918B25E22F3F00CD4C63 /* GoogleService-Info.plist in Resources */,
 				9849917B25E2187500CD4C63 /* Assets.xcassets in Resources */,
+				98990F8A25EB780F006E37DF /* layer-211@2x.png in Resources */,
 				9849917925E2187500CD4C63 /* Main.storyboard in Resources */,
+				98990F7F25EB71FC006E37DF /* pin2x-1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98990F8725EB73D1006E37DF /* LocationViewController.swift in Sources */,
 				9849917625E2187500CD4C63 /* ViewController.swift in Sources */,
 				9849917225E2187500CD4C63 /* AppDelegate.swift in Sources */,
 				98990F7C25EB63FB006E37DF /* SignUpViewController.swift in Sources */,

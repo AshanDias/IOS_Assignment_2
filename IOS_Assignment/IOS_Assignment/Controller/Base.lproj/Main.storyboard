@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VKa-TS-prj">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -177,9 +178,70 @@
             </objects>
             <point key="canvasLocation" x="724" y="54"/>
         </scene>
+        <!--LocationViewController-->
+        <scene sceneID="8H1-oc-cgJ">
+            <objects>
+                <viewController title="LocationViewController" id="VKa-TS-prj" customClass="LocationViewController" customModule="IOS_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ahb-n6-N4E">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin2x-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="PYR-5j-jVe">
+                                <rect key="frame" x="30" y="33" width="315" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="315" id="DCQ-Lb-hbh"/>
+                                    <constraint firstAttribute="height" constant="128" id="JZA-HE-gcc"/>
+                                </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qf8-Mz-Zyy">
+                                <rect key="frame" x="40" y="251" width="295" height="40"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="NYZ-Zr-UNr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="ALLOW LOCATION">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="layer-211.png" translatesAutoresizingMaskIntoConstraints="NO" id="Lgl-lj-h96">
+                                <rect key="frame" x="30" y="364" width="315" height="204.5"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NN3-ga-JfF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qf8-Mz-Zyy" firstAttribute="top" secondItem="PYR-5j-jVe" secondAttribute="bottom" constant="90" id="0FC-kC-Ntf"/>
+                            <constraint firstItem="NN3-ga-JfF" firstAttribute="trailing" secondItem="PYR-5j-jVe" secondAttribute="trailing" constant="30" id="7ni-hp-9ab"/>
+                            <constraint firstItem="NN3-ga-JfF" firstAttribute="trailing" secondItem="Qf8-Mz-Zyy" secondAttribute="trailing" constant="40" id="9pk-dA-2io"/>
+                            <constraint firstItem="PYR-5j-jVe" firstAttribute="top" secondItem="NN3-ga-JfF" secondAttribute="top" constant="33" id="Cxb-jK-Ks8"/>
+                            <constraint firstItem="Lgl-lj-h96" firstAttribute="centerX" secondItem="Ahb-n6-N4E" secondAttribute="centerX" id="GQe-mO-plx"/>
+                            <constraint firstItem="PYR-5j-jVe" firstAttribute="leading" secondItem="NN3-ga-JfF" secondAttribute="leading" constant="30" id="GcA-ts-phW"/>
+                            <constraint firstItem="Lgl-lj-h96" firstAttribute="leading" secondItem="NN3-ga-JfF" secondAttribute="leading" constant="30" id="Xvs-bM-3mB"/>
+                            <constraint firstItem="Qf8-Mz-Zyy" firstAttribute="centerX" secondItem="Ahb-n6-N4E" secondAttribute="centerX" id="pPU-A8-arn"/>
+                            <constraint firstItem="NN3-ga-JfF" firstAttribute="trailing" secondItem="Lgl-lj-h96" secondAttribute="trailing" constant="30" id="qqG-dL-9Bf"/>
+                            <constraint firstItem="PYR-5j-jVe" firstAttribute="centerX" secondItem="Ahb-n6-N4E" secondAttribute="centerX" id="xok-TN-Q3p"/>
+                            <constraint firstItem="Lgl-lj-h96" firstAttribute="top" secondItem="Qf8-Mz-Zyy" secondAttribute="bottom" constant="73" id="zqW-o9-Fqq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="locationButton" destination="Qf8-Mz-Zyy" id="foP-Y4-YAc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uq1-Wd-h9k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-502" y="-731"/>
+        </scene>
     </scenes>
     <resources>
         <image name="icons8-kitchen-room-96.png" width="96" height="96"/>
+        <image name="layer-211.png" width="492" height="204.5"/>
+        <image name="pin2x-1.png" width="188" height="176"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
