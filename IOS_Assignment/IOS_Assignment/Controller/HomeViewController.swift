@@ -63,6 +63,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         } else {
             let cell=tableView.dequeueReusableCell(withIdentifier: "FoodsTableViewCell", for: indexPath) as! FoodsTableViewCell
             cell.lbl_desc.text="aaaa"
+            cell.setupView(food: foodItem[indexPath.row])
             return cell
         }
       

@@ -21,8 +21,15 @@ class FoodsTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+       
         // Configure the view for the selected state
+    }
+    
+    func setupView(food:FoodItem) {
+        imageView?.image=food.foodImage
+        lbl_name.text=food.foodName
+        lbl_desc.text=food.foodDescription
+        lbl_price.text=NumberFormatter().string(from: NSNumber(value: food.foodPrice))
     }
     
 }
