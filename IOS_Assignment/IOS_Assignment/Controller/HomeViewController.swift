@@ -22,7 +22,8 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     let foodItem: [FoodItem] = [
         FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"), foodName: "Burger 1", foodDescription: "Burger 1 Description", foodPrice: 150),
         FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250),
-        FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"), foodName: "Burger 3", foodDescription: "Burger 3 Description", foodPrice: 350)
+        FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"), foodName: "Burger 3", foodDescription: "Burger 3 Description", foodPrice: 350),
+        FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250),   FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250),   FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250),   FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250),   FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250),   FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250)
         
     ]
 
@@ -57,47 +58,48 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == tbl_cart {
+          
             let cell=tableView.dequeueReusableCell(withIdentifier: "CartTableViewCell", for: indexPath) as! CartTableViewCell
             cell.setupView(cart: cartItems[indexPath.row])
             return cell
         } else {
             let cell=tableView.dequeueReusableCell(withIdentifier: "FoodsTableViewCell", for: indexPath) as! FoodsTableViewCell
-            cell.lbl_desc.text="aaaa"
+          
             cell.setupView(food: foodItem[indexPath.row])
             return cell
         }
       
     }
-
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
-        if tableView == tbl_cart{
-            
-        
-        let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 50))
-
-               let items = UILabel()
-                    items.frame = CGRect.init(x: 20, y: 5, width: headerView.frame.width-10, height: headerView.frame.height-10)
-                    items.text = "Food Items"
-                    items.font = .systemFont(ofSize: 15)
-                    items.textColor = .black
-
-                let price = UILabel()
-                    price.frame = CGRect.init(x: 250, y: 5, width: headerView.frame.width-10, height: headerView.frame.height-10)
-                    price.text = "Price"
-                    price.font = .systemFont(ofSize: 15)
-                    price.textColor = .black
-
-               headerView.addSubview(items)
-                headerView.addSubview(price)
-
-            return headerView
-        }
-        else{
-            let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 0))
-            return headerView
-        }
-    }
+//
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//
+//        if tableView == tbl_cart{
+//
+//
+//        let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 50))
+//
+//               let items = UILabel()
+//                    items.frame = CGRect.init(x: 20, y: 5, width: headerView.frame.width-10, height: headerView.frame.height-10)
+//                    items.text = "Food Items"
+//                    items.font = .systemFont(ofSize: 15)
+//                    items.textColor = .black
+//
+//                let price = UILabel()
+//                    price.frame = CGRect.init(x: 250, y: 5, width: headerView.frame.width-10, height: headerView.frame.height-10)
+//                    price.text = "Price"
+//                    price.font = .systemFont(ofSize: 15)
+//                    price.textColor = .black
+//
+//               headerView.addSubview(items)
+//                headerView.addSubview(price)
+//
+//            return headerView
+//        }
+//        else{
+//            let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 0))
+//            return headerView
+//        }
+//    }
 
 
     /*
