@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+var currentIndex=0
 class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
    
         
@@ -30,8 +30,11 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     @IBOutlet var tbl_cart:UITableView!
     @IBOutlet var tbl_foods:UITableView!
     
+    @IBOutlet weak var btn_order: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        styleButton()
         
         let nib=UINib(nibName: "CartTableViewCell", bundle: nil)
         tbl_cart.register(nib, forCellReuseIdentifier: "CartTableViewCell")
@@ -44,6 +47,12 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         tbl_foods.delegate=self
         tbl_foods.dataSource=self
+        
+        if cartItems.count > 0{
+            btn_order.isHidden=false
+        }else{
+            btn_order.isHidden=true
+        }
         // Do any additional setup after loading the view.
     }
     
@@ -56,19 +65,31 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         return 0
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == tbl_cart {
           
             let cell=tableView.dequeueReusableCell(withIdentifier: "CartTableViewCell", for: indexPath) as! CartTableViewCell
             cell.setupView(cart: cartItems[indexPath.row])
+         
             return cell
         } else {
             let cell=tableView.dequeueReusableCell(withIdentifier: "FoodsTableViewCell", for: indexPath) as! FoodsTableViewCell
-          
+           
             cell.setupView(food: foodItem[indexPath.row])
+           
             return cell
         }
       
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        currentIndex=indexPath.row
+        performSegue(withIdentifier: "foodNavogator", sender: self)
+    }
+    
+    func styleButton()  {
+        btn_order.layer.cornerRadius=17
     }
 //
 //    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

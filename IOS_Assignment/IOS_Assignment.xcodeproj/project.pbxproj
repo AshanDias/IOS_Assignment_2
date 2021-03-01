@@ -14,6 +14,7 @@
 		98337DFB25ED21AF00C309D1 /* Foods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98337DFA25ED21AF00C309D1 /* Foods.swift */; };
 		98337DFF25ED229D00C309D1 /* FoodsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98337DFD25ED229D00C309D1 /* FoodsTableViewCell.swift */; };
 		98337E0025ED229D00C309D1 /* FoodsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98337DFE25ED229D00C309D1 /* FoodsTableViewCell.xib */; };
+		98337E0425ED656E00C309D1 /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98337E0325ED656E00C309D1 /* FoodDetailViewController.swift */; };
 		9849917225E2187500CD4C63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9849917125E2187500CD4C63 /* AppDelegate.swift */; };
 		9849917425E2187500CD4C63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9849917325E2187500CD4C63 /* SceneDelegate.swift */; };
 		9849917625E2187500CD4C63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9849917525E2187500CD4C63 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 		98337DFA25ED21AF00C309D1 /* Foods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foods.swift; sourceTree = "<group>"; };
 		98337DFD25ED229D00C309D1 /* FoodsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsTableViewCell.swift; sourceTree = "<group>"; };
 		98337DFE25ED229D00C309D1 /* FoodsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodsTableViewCell.xib; sourceTree = "<group>"; };
+		98337E0325ED656E00C309D1 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
 		9849916E25E2187500CD4C63 /* IOS_Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOS_Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9849917125E2187500CD4C63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9849917325E2187500CD4C63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				98990F7B25EB63FB006E37DF /* SignUpViewController.swift */,
 				98990F8625EB73D1006E37DF /* LocationViewController.swift */,
 				98337DF225ED0B7000C309D1 /* HomeViewController.swift */,
+				98337E0325ED656E00C309D1 /* FoodDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				98990F9625EB8D09006E37DF /* LocationService.swift in Sources */,
 				98990F8725EB73D1006E37DF /* LocationViewController.swift in Sources */,
 				9849917625E2187500CD4C63 /* ViewController.swift in Sources */,
+				98337E0425ED656E00C309D1 /* FoodDetailViewController.swift in Sources */,
 				98337DF725ED0DB300C309D1 /* CartTableViewCell.swift in Sources */,
 				98337DF325ED0B7000C309D1 /* HomeViewController.swift in Sources */,
 				98337DFB25ED21AF00C309D1 /* Foods.swift in Sources */,

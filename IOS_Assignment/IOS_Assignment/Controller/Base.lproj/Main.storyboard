@@ -95,7 +95,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="22" y="54"/>
+            <point key="canvasLocation" x="-689" y="188"/>
         </scene>
         <!--SignUpController-->
         <scene sceneID="5Wa-UE-9cd">
@@ -275,7 +275,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="m23-ZZ-16m"/>
                                 </constraints>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Order">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
@@ -297,13 +297,40 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="k9t-u9-yG2"/>
                     <connections>
+                        <outlet property="btn_order" destination="Ofx-iK-f3X" id="LMV-Pv-JIz"/>
                         <outlet property="tbl_cart" destination="f9c-jT-W1t" id="vjs-mO-aqm"/>
                         <outlet property="tbl_foods" destination="vfH-ZH-St6" id="0m0-FF-WIv"/>
+                        <segue destination="Qo3-cT-ZRz" kind="show" identifier="foodNavogator" id="coa-tx-DLU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TjX-PS-VFr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2188" y="-1249.0254872563719"/>
+            <point key="canvasLocation" x="2444" y="-1335"/>
+        </scene>
+        <!--FoodDetailViewController-->
+        <scene sceneID="FJW-qs-LfA">
+            <objects>
+                <viewController id="Qo3-cT-ZRz" userLabel="FoodDetailViewController" customClass="FoodDetailViewController" customModule="IOS_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nsz-eV-jTt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7m-qz-62o">
+                                <rect key="frame" x="166" y="195" width="52" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Q6-Nt-ENp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4cd-WA-LnR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tMy-Kf-3gD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3285.5999999999999" y="-1318.2908545727137"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="jx7-cM-V6x">
