@@ -11,6 +11,7 @@ class CartTableViewCell: UITableViewCell {
 
     @IBOutlet var lbl_item:UILabel!
     @IBOutlet var lbl_price:UILabel!
+    @IBOutlet var lbl_count:UILabel!
     @IBOutlet var btn_add:UIButton!
     @IBOutlet var btn_sub:UIButton!
     

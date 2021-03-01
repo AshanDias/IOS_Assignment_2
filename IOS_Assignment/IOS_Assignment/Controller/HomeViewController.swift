@@ -18,9 +18,16 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         Cart(item: "Fruit", price: "600")
         
     ]
-
+//
+    let foodItem: [FoodItem] = [
+        FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"), foodName: "Burger 1", foodDescription: "Burger 1 Description", foodPrice: 150),
+        FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250),
+        FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"), foodName: "Burger 3", foodDescription: "Burger 3 Description", foodPrice: 350)
+        
+    ]
 
     @IBOutlet var tbl_cart:UITableView!
+    @IBOutlet var tbl_foods:UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

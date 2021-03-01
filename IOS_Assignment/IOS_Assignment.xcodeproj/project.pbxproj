@@ -11,6 +11,9 @@
 		98337DF325ED0B7000C309D1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98337DF225ED0B7000C309D1 /* HomeViewController.swift */; };
 		98337DF725ED0DB300C309D1 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98337DF525ED0DB300C309D1 /* CartTableViewCell.swift */; };
 		98337DF825ED0DB300C309D1 /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98337DF625ED0DB300C309D1 /* CartTableViewCell.xib */; };
+		98337DFB25ED21AF00C309D1 /* Foods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98337DFA25ED21AF00C309D1 /* Foods.swift */; };
+		98337DFF25ED229D00C309D1 /* FoodsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98337DFD25ED229D00C309D1 /* FoodsTableViewCell.swift */; };
+		98337E0025ED229D00C309D1 /* FoodsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98337DFE25ED229D00C309D1 /* FoodsTableViewCell.xib */; };
 		9849917225E2187500CD4C63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9849917125E2187500CD4C63 /* AppDelegate.swift */; };
 		9849917425E2187500CD4C63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9849917325E2187500CD4C63 /* SceneDelegate.swift */; };
 		9849917625E2187500CD4C63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9849917525E2187500CD4C63 /* ViewController.swift */; };
@@ -31,6 +34,9 @@
 		98337DF225ED0B7000C309D1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		98337DF525ED0DB300C309D1 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		98337DF625ED0DB300C309D1 /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
+		98337DFA25ED21AF00C309D1 /* Foods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foods.swift; sourceTree = "<group>"; };
+		98337DFD25ED229D00C309D1 /* FoodsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsTableViewCell.swift; sourceTree = "<group>"; };
+		98337DFE25ED229D00C309D1 /* FoodsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodsTableViewCell.xib; sourceTree = "<group>"; };
 		9849916E25E2187500CD4C63 /* IOS_Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOS_Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9849917125E2187500CD4C63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9849917325E2187500CD4C63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				98990F9D25EB9D26006E37DF /* Cart.swift */,
+				98337DFA25ED21AF00C309D1 /* Foods.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -152,6 +159,8 @@
 			children = (
 				98337DF525ED0DB300C309D1 /* CartTableViewCell.swift */,
 				98337DF625ED0DB300C309D1 /* CartTableViewCell.xib */,
+				98337DFD25ED229D00C309D1 /* FoodsTableViewCell.swift */,
+				98337DFE25ED229D00C309D1 /* FoodsTableViewCell.xib */,
 			);
 			path = UiRow;
 			sourceTree = "<group>";
@@ -238,6 +247,7 @@
 				9849917B25E2187500CD4C63 /* Assets.xcassets in Resources */,
 				98990F8A25EB780F006E37DF /* layer-211@2x.png in Resources */,
 				9849917925E2187500CD4C63 /* Main.storyboard in Resources */,
+				98337E0025ED229D00C309D1 /* FoodsTableViewCell.xib in Resources */,
 				98990F7F25EB71FC006E37DF /* pin2x-1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,10 +306,12 @@
 				9849917625E2187500CD4C63 /* ViewController.swift in Sources */,
 				98337DF725ED0DB300C309D1 /* CartTableViewCell.swift in Sources */,
 				98337DF325ED0B7000C309D1 /* HomeViewController.swift in Sources */,
+				98337DFB25ED21AF00C309D1 /* Foods.swift in Sources */,
 				9849917225E2187500CD4C63 /* AppDelegate.swift in Sources */,
 				98990F7C25EB63FB006E37DF /* SignUpViewController.swift in Sources */,
 				9849917425E2187500CD4C63 /* SceneDelegate.swift in Sources */,
 				98990F9E25EB9D26006E37DF /* Cart.swift in Sources */,
+				98337DFF25ED229D00C309D1 /* FoodsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

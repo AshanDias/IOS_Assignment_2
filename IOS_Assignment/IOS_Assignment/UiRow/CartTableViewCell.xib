@@ -72,6 +72,9 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <accessibility key="accessibilityConfiguration" identifier="CartTableViewCell"/>
             <connections>
+                <outlet property="btn_add" destination="uIW-Em-zuv" id="XHr-aL-Ixm"/>
+                <outlet property="btn_sub" destination="6P7-ha-0E2" id="dZf-qe-meX"/>
+                <outlet property="lbl_count" destination="4RW-am-LrJ" id="SEJ-iu-01K"/>
                 <outlet property="lbl_item" destination="I45-Gk-dhb" id="LpI-Jt-Spf"/>
                 <outlet property="lbl_price" destination="coy-ta-DsJ" id="hpw-6f-Dl8"/>
             </connections>
