@@ -28,10 +28,43 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6P7-ha-0E2">
+                        <rect key="frame" x="110" y="75.5" width="30" height="30"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="-">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALS-bL-lSL">
+                        <rect key="frame" x="204" y="80" width="0.0" height="0.0"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIW-Em-zuv">
+                        <rect key="frame" x="345" y="75.5" width="30" height="30"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="+">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4RW-am-LrJ">
+                        <rect key="frame" x="227" y="83.5" width="31" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="4RW-am-LrJ" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="1C4-iK-DDz"/>
+                    <constraint firstItem="6P7-ha-0E2" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="2af-wS-fu6"/>
+                    <constraint firstItem="6P7-ha-0E2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="90" id="FBK-CV-9cZ"/>
                     <constraint firstItem="I45-Gk-dhb" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="L4F-N6-LAG"/>
+                    <constraint firstItem="4RW-am-LrJ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="O8H-O2-Rle"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="uIW-Em-zuv" secondAttribute="trailing" constant="90" id="Ptc-05-Ahj"/>
                     <constraint firstAttribute="trailingMargin" secondItem="coy-ta-DsJ" secondAttribute="trailing" constant="10" id="mVE-To-7aH"/>
+                    <constraint firstItem="uIW-Em-zuv" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ue8-AB-qRa"/>
                     <constraint firstItem="I45-Gk-dhb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="v9W-Oj-WzB"/>
                     <constraint firstItem="coy-ta-DsJ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="zFZ-ch-pQD"/>
                 </constraints>

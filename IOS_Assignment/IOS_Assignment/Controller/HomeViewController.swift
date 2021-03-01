@@ -9,31 +9,6 @@ import UIKit
 
 class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
    
-    
-    var myarray=[[
-        "name":"Apple",
-        "price":"100.00"
-    ],
-    [
-        "name":"Orange",
-        "price":"50.00"
-    ],
-    [
-        "name":"Pear",
-        "price":"60.00"
-    ],
-    [
-        "name":"Grapefruit",
-        "price":"100.00"
-    ],
-    [
-        "name":"Potato",
-        "price":"30.00"
-    ],
-    [
-        "name":"Tomato",
-        "price":"40.00"
-    ]]
         
     let cartItems: [Cart] = [
         Cart(item: "Cake", price: "200"),
