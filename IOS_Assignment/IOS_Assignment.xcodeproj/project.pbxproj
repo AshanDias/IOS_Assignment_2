@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		430FD82233B6D42D02EF3851 /* Pods_IOS_Assignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D91942043B54F85CF3B641D9 /* Pods_IOS_Assignment.framework */; };
+		98337DF325ED0B7000C309D1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98337DF225ED0B7000C309D1 /* HomeViewController.swift */; };
+		98337DF725ED0DB300C309D1 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98337DF525ED0DB300C309D1 /* CartTableViewCell.swift */; };
+		98337DF825ED0DB300C309D1 /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98337DF625ED0DB300C309D1 /* CartTableViewCell.xib */; };
 		9849917225E2187500CD4C63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9849917125E2187500CD4C63 /* AppDelegate.swift */; };
 		9849917425E2187500CD4C63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9849917325E2187500CD4C63 /* SceneDelegate.swift */; };
 		9849917625E2187500CD4C63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9849917525E2187500CD4C63 /* ViewController.swift */; };
@@ -25,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		98337DF225ED0B7000C309D1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		98337DF525ED0DB300C309D1 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		98337DF625ED0DB300C309D1 /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
 		9849916E25E2187500CD4C63 /* IOS_Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOS_Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9849917125E2187500CD4C63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9849917325E2187500CD4C63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +134,7 @@
 				9849917725E2187500CD4C63 /* Main.storyboard */,
 				98990F7B25EB63FB006E37DF /* SignUpViewController.swift */,
 				98990F8625EB73D1006E37DF /* LocationViewController.swift */,
+				98337DF225ED0B7000C309D1 /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -143,6 +150,8 @@
 		98990FA125EBAFEC006E37DF /* UiRow */ = {
 			isa = PBXGroup;
 			children = (
+				98337DF525ED0DB300C309D1 /* CartTableViewCell.swift */,
+				98337DF625ED0DB300C309D1 /* CartTableViewCell.xib */,
 			);
 			path = UiRow;
 			sourceTree = "<group>";
@@ -225,6 +234,7 @@
 				9849917E25E2187500CD4C63 /* LaunchScreen.storyboard in Resources */,
 				98990F7425EB5D87006E37DF /* icons8-kitchen-room-96.png in Resources */,
 				9849918B25E22F3F00CD4C63 /* GoogleService-Info.plist in Resources */,
+				98337DF825ED0DB300C309D1 /* CartTableViewCell.xib in Resources */,
 				9849917B25E2187500CD4C63 /* Assets.xcassets in Resources */,
 				98990F8A25EB780F006E37DF /* layer-211@2x.png in Resources */,
 				9849917925E2187500CD4C63 /* Main.storyboard in Resources */,
@@ -284,6 +294,8 @@
 				98990F9625EB8D09006E37DF /* LocationService.swift in Sources */,
 				98990F8725EB73D1006E37DF /* LocationViewController.swift in Sources */,
 				9849917625E2187500CD4C63 /* ViewController.swift in Sources */,
+				98337DF725ED0DB300C309D1 /* CartTableViewCell.swift in Sources */,
+				98337DF325ED0B7000C309D1 /* HomeViewController.swift in Sources */,
 				9849917225E2187500CD4C63 /* AppDelegate.swift in Sources */,
 				98990F7C25EB63FB006E37DF /* SignUpViewController.swift in Sources */,
 				9849917425E2187500CD4C63 /* SceneDelegate.swift in Sources */,

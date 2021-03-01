@@ -10,7 +10,7 @@ import Foundation
 
 struct Cart {
     var item : String?
-    var detail : String?
+    var price : String?
 }
 
 
