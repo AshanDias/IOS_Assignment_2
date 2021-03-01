@@ -9,6 +9,11 @@ import UIKit
 
 class FoodsTableViewCell: UITableViewCell {
 
+    @IBOutlet var img_imaga:UIImageView!
+    @IBOutlet var lbl_name:UILabel!
+    @IBOutlet var lbl_desc:UILabel!
+    @IBOutlet var lbl_price:UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -31,25 +31,48 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let nib=UINib(nibName: "CartTableViewCell", bundle: nil)
         tbl_cart.register(nib, forCellReuseIdentifier: "CartTableViewCell")
+            
         tbl_cart.delegate=self
         tbl_cart.dataSource=self
+        
+        let foodnib=UINib(nibName: "FoodsTableViewCell", bundle: nil)
+        tbl_foods.register(foodnib, forCellReuseIdentifier: "FoodsTableViewCell")
+        
+        tbl_foods.delegate=self
+        tbl_foods.dataSource=self
         // Do any additional setup after loading the view.
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cartItems.count
+        if tableView == tbl_cart{
+            return cartItems.count
+        }else if(tableView == tbl_foods){
+            return foodItem.count
+        }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell=tableView.dequeueReusableCell(withIdentifier: "CartTableViewCell", for: indexPath) as! CartTableViewCell
-
-        cell.setupView(cart: cartItems[indexPath.row])
-        return cell
+        if tableView == tbl_cart {
+            let cell=tableView.dequeueReusableCell(withIdentifier: "CartTableViewCell", for: indexPath) as! CartTableViewCell
+            cell.setupView(cart: cartItems[indexPath.row])
+            return cell
+        } else {
+            let cell=tableView.dequeueReusableCell(withIdentifier: "FoodsTableViewCell", for: indexPath) as! FoodsTableViewCell
+            cell.lbl_desc.text="aaaa"
+            return cell
+        }
+      
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        if tableView == tbl_cart{
+            
+        
         let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 50))
 
                let items = UILabel()
@@ -67,10 +90,15 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                headerView.addSubview(items)
                 headerView.addSubview(price)
 
-        return headerView
+            return headerView
+        }
+        else{
+            let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 0))
+            return headerView
+        }
     }
-    
-    
+
+
     /*
     // MARK: - Navigation
 
