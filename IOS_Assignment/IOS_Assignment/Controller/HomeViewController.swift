@@ -7,25 +7,26 @@
 
 import UIKit
 var currentIndex=0
+
+let cartItems: [Cart] = [
+Cart(item: "Cake", price: "200"),
+Cart(item: "Bun", price: "500"),
+Cart(item: "Burger", price: "300"),
+Cart(item: "Cocacola", price: "150"),
+Cart(item: "Fruit", price: "600")
+
+]
+
+let foodItem: [FoodItem] = [
+FoodItem(foodImage: #imageLiteral(resourceName: "icons8-kitchen-room-96.png"), foodName: "Burger 1", foodDescription: "Burger 1 Description", foodPrice: 150),
+FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250),
+FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"), foodName: "Burger 3", foodDescription: "Burger 3 Description", foodPrice: 350),
+FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250),   FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250),   FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250),   FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250),   FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250),   FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250)
+
+]
 class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
    
-        
-    let cartItems: [Cart] = [
-        Cart(item: "Cake", price: "200"),
-        Cart(item: "Bun", price: "500"),
-        Cart(item: "Burger", price: "300"),
-        Cart(item: "Cocacola", price: "150"),
-        Cart(item: "Fruit", price: "600")
-        
-    ]
-//
-    let foodItem: [FoodItem] = [
-        FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"), foodName: "Burger 1", foodDescription: "Burger 1 Description", foodPrice: 150),
-        FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250),
-        FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"), foodName: "Burger 3", foodDescription: "Burger 3 Description", foodPrice: 350),
-        FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250),   FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250),   FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250),   FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250),   FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250),   FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250)
-        
-    ]
+  
 
     @IBOutlet var tbl_cart:UITableView!
     @IBOutlet var tbl_foods:UITableView!

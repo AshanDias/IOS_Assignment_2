@@ -10,11 +10,18 @@ import UIKit
 class FoodDetailViewController: UIViewController {
 
     @IBOutlet  var btn_addCart:UIButton!
-    
+    @IBOutlet var lbl_price:UILabel!
+    @IBOutlet var lbl_desc:UILabel!
+    @IBOutlet var img_image:UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         radiusBtn()
+        let res = foodItem[currentIndex]
+        lbl_price.text=String(res.foodPrice)
+        lbl_desc.text=res.foodDescription
+        img_image.image=res.foodImage
+        
         // Do any additional setup after loading the view.
     }
     
