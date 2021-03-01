@@ -9,14 +9,18 @@ import UIKit
 
 class FoodDetailViewController: UIViewController {
 
- 
+    @IBOutlet  var btn_addCart:UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-      
+        radiusBtn()
         // Do any additional setup after loading the view.
     }
     
+    func radiusBtn() {
+        btn_addCart.layer.cornerRadius=20
+    }
 
     /*
     // MARK: - Navigation

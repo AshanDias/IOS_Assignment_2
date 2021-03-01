@@ -15,6 +15,7 @@
 		98337DFF25ED229D00C309D1 /* FoodsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98337DFD25ED229D00C309D1 /* FoodsTableViewCell.swift */; };
 		98337E0025ED229D00C309D1 /* FoodsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98337DFE25ED229D00C309D1 /* FoodsTableViewCell.xib */; };
 		98337E0425ED656E00C309D1 /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98337E0325ED656E00C309D1 /* FoodDetailViewController.swift */; };
+		98337E0725ED6E4200C309D1 /* hr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 98337E0625ED6E4200C309D1 /* hr.jpg */; };
 		9849917225E2187500CD4C63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9849917125E2187500CD4C63 /* AppDelegate.swift */; };
 		9849917425E2187500CD4C63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9849917325E2187500CD4C63 /* SceneDelegate.swift */; };
 		9849917625E2187500CD4C63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9849917525E2187500CD4C63 /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 		98337DFD25ED229D00C309D1 /* FoodsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsTableViewCell.swift; sourceTree = "<group>"; };
 		98337DFE25ED229D00C309D1 /* FoodsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodsTableViewCell.xib; sourceTree = "<group>"; };
 		98337E0325ED656E00C309D1 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
+		98337E0625ED6E4200C309D1 /* hr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hr.jpg; sourceTree = "<group>"; };
 		9849916E25E2187500CD4C63 /* IOS_Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOS_Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9849917125E2187500CD4C63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9849917325E2187500CD4C63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				9849917125E2187500CD4C63 /* AppDelegate.swift */,
 				9849917325E2187500CD4C63 /* SceneDelegate.swift */,
 				9849917A25E2187500CD4C63 /* Assets.xcassets */,
+				98337E0625ED6E4200C309D1 /* hr.jpg */,
 				98990F8925EB780F006E37DF /* layer-211@2x.png */,
 				98990F7E25EB71FC006E37DF /* pin2x-1.png */,
 				98990F7325EB5D87006E37DF /* icons8-kitchen-room-96.png */,
@@ -248,6 +251,7 @@
 				9849918B25E22F3F00CD4C63 /* GoogleService-Info.plist in Resources */,
 				98337DF825ED0DB300C309D1 /* CartTableViewCell.xib in Resources */,
 				9849917B25E2187500CD4C63 /* Assets.xcassets in Resources */,
+				98337E0725ED6E4200C309D1 /* hr.jpg in Resources */,
 				98990F8A25EB780F006E37DF /* layer-211@2x.png in Resources */,
 				9849917925E2187500CD4C63 /* Main.storyboard in Resources */,
 				98337E0025ED229D00C309D1 /* FoodsTableViewCell.xib in Resources */,

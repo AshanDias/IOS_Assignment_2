@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qIS-gm-GSE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qo3-cT-ZRz">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -315,18 +315,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7m-qz-62o">
-                                <rect key="frame" x="166" y="195" width="52" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin2x-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="eJa-8t-rnp">
+                                <rect key="frame" x="20" y="20" width="335" height="176"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDc-hb-gPQ">
+                                <rect key="frame" x="33" y="282" width="76" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9C-an-KEo">
+                                <rect key="frame" x="33" y="336" width="88" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bpn-Xg-q8i">
+                                <rect key="frame" x="100" y="544" width="175" height="40"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="4es-Jc-rRN"/>
+                                </constraints>
+                                <state key="normal" title="Add to Cart">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Q6-Nt-ENp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Bpn-Xg-q8i" firstAttribute="leading" secondItem="6Q6-Nt-ENp" secondAttribute="leading" constant="100" id="1vz-74-zwK"/>
+                            <constraint firstItem="eJa-8t-rnp" firstAttribute="top" secondItem="6Q6-Nt-ENp" secondAttribute="top" constant="20" id="7Cz-jO-PFX"/>
+                            <constraint firstItem="W9C-an-KEo" firstAttribute="leading" secondItem="6Q6-Nt-ENp" secondAttribute="leading" constant="33" id="8Ga-ss-OD8"/>
+                            <constraint firstItem="6Q6-Nt-ENp" firstAttribute="trailing" secondItem="eJa-8t-rnp" secondAttribute="trailing" constant="20" id="Veq-bA-Alg"/>
+                            <constraint firstItem="6Q6-Nt-ENp" firstAttribute="trailing" secondItem="Bpn-Xg-q8i" secondAttribute="trailing" constant="100" id="WaR-lM-7Cq"/>
+                            <constraint firstItem="IDc-hb-gPQ" firstAttribute="leading" secondItem="6Q6-Nt-ENp" secondAttribute="leading" constant="33" id="Yrj-ol-rxs"/>
+                            <constraint firstItem="IDc-hb-gPQ" firstAttribute="top" secondItem="eJa-8t-rnp" secondAttribute="bottom" constant="86" id="a22-98-Np6"/>
+                            <constraint firstItem="W9C-an-KEo" firstAttribute="top" secondItem="IDc-hb-gPQ" secondAttribute="bottom" constant="12" id="ciM-64-aVj"/>
+                            <constraint firstItem="eJa-8t-rnp" firstAttribute="leading" secondItem="6Q6-Nt-ENp" secondAttribute="leading" constant="20" id="fTE-Yn-Wjl"/>
+                            <constraint firstItem="6Q6-Nt-ENp" firstAttribute="bottom" secondItem="Bpn-Xg-q8i" secondAttribute="bottom" constant="63" id="uex-p7-wmy"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4cd-WA-LnR"/>
+                    <connections>
+                        <outlet property="btn_addCart" destination="Bpn-Xg-q8i" id="nh2-4W-Tpa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tMy-Kf-3gD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
