@@ -8,12 +8,12 @@
 import UIKit
 var currentIndex=0
 
-let cartItems: [Cart] = [
-Cart(item: "Cake", price: "200"),
-Cart(item: "Bun", price: "500"),
-Cart(item: "Burger", price: "300"),
-Cart(item: "Cocacola", price: "150"),
-Cart(item: "Fruit", price: "600")
+var cartItems: [Cart] = [
+//Cart(item: "Cake", price: "200"),
+//Cart(item: "Bun", price: "500"),
+//Cart(item: "Burger", price: "300"),
+//Cart(item: "Cocacola", price: "150"),
+//Cart(item: "Fruit", price: "600")
 
 ]
 
@@ -24,7 +24,7 @@ FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"), foodName: "Burge
 FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250),   FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250),   FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250),   FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250),   FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250),   FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250)
 
 ]
-class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
    
   
 
@@ -54,8 +54,14 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         }else{
             btn_order.isHidden=true
         }
+        
+   
+       
         // Do any additional setup after loading the view.
     }
+    
+   
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == tbl_cart{
