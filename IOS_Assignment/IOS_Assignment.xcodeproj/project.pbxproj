@@ -22,10 +22,6 @@
 		98990F8A25EB780F006E37DF /* layer-211@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 98990F8925EB780F006E37DF /* layer-211@2x.png */; };
 		98990F9625EB8D09006E37DF /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98990F9525EB8D09006E37DF /* LocationService.swift */; };
 		98990F9E25EB9D26006E37DF /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98990F9D25EB9D26006E37DF /* Cart.swift */; };
-		98990FA325EBAFFD006E37DF /* CartItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98990FA225EBAFFD006E37DF /* CartItemCell.swift */; };
-		98990FA825EBB40B006E37DF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98990FA725EBB40B006E37DF /* Constant.swift */; };
-		98990FAF25EBBFA0006E37DF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98990FAE25EBBFA0006E37DF /* HomeViewController.swift */; };
-		989EDD3F25EC22FB0063088A /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989EDD3E25EC22FB0063088A /* CartTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,10 +41,6 @@
 		98990F8925EB780F006E37DF /* layer-211@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "layer-211@2x.png"; sourceTree = "<group>"; };
 		98990F9525EB8D09006E37DF /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		98990F9D25EB9D26006E37DF /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
-		98990FA225EBAFFD006E37DF /* CartItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemCell.swift; sourceTree = "<group>"; };
-		98990FA725EBB40B006E37DF /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		98990FAE25EBBFA0006E37DF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		989EDD3E25EC22FB0063088A /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		D3122F9D4DB77C72BBD873B6 /* Pods-IOS_Assignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOS_Assignment.release.xcconfig"; path = "Target Support Files/Pods-IOS_Assignment/Pods-IOS_Assignment.release.xcconfig"; sourceTree = "<group>"; };
 		D91942043B54F85CF3B641D9 /* Pods_IOS_Assignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOS_Assignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0A1EAB5E4C9EB130ABA871D /* Pods-IOS_Assignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOS_Assignment.debug.xcconfig"; path = "Target Support Files/Pods-IOS_Assignment/Pods-IOS_Assignment.debug.xcconfig"; sourceTree = "<group>"; };
@@ -136,8 +128,6 @@
 				9849917725E2187500CD4C63 /* Main.storyboard */,
 				98990F7B25EB63FB006E37DF /* SignUpViewController.swift */,
 				98990F8625EB73D1006E37DF /* LocationViewController.swift */,
-				98990FAE25EBBFA0006E37DF /* HomeViewController.swift */,
-				989EDD3E25EC22FB0063088A /* CartTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -153,7 +143,6 @@
 		98990FA125EBAFEC006E37DF /* UiRow */ = {
 			isa = PBXGroup;
 			children = (
-				98990FA225EBAFFD006E37DF /* CartItemCell.swift */,
 			);
 			path = UiRow;
 			sourceTree = "<group>";
@@ -161,7 +150,6 @@
 		98990FA625EBB3D9006E37DF /* Constant */ = {
 			isa = PBXGroup;
 			children = (
-				98990FA725EBB40B006E37DF /* Constant.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -297,13 +285,9 @@
 				98990F8725EB73D1006E37DF /* LocationViewController.swift in Sources */,
 				9849917625E2187500CD4C63 /* ViewController.swift in Sources */,
 				9849917225E2187500CD4C63 /* AppDelegate.swift in Sources */,
-				98990FA325EBAFFD006E37DF /* CartItemCell.swift in Sources */,
-				989EDD3F25EC22FB0063088A /* CartTableViewCell.swift in Sources */,
 				98990F7C25EB63FB006E37DF /* SignUpViewController.swift in Sources */,
-				98990FA825EBB40B006E37DF /* Constant.swift in Sources */,
 				9849917425E2187500CD4C63 /* SceneDelegate.swift in Sources */,
 				98990F9E25EB9D26006E37DF /* Cart.swift in Sources */,
-				98990FAF25EBBFA0006E37DF /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
