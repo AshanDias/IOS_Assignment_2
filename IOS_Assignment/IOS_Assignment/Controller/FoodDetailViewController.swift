@@ -38,8 +38,7 @@ class FoodDetailViewController: UIViewController {
     
     @IBAction func btnAddCartClick(_ sender: Any) {
         cartItems.append(Cart(item: res.foodName, price: String(res.foodPrice)))
-//        cartItems.append(Cart(item: "Fruit", price: "600"))
-//        cartItems.append(Cart(item: "Fruit TEst data", price: "700"))
+        dismiss(animated: true, completion: nil)
       
        
     }

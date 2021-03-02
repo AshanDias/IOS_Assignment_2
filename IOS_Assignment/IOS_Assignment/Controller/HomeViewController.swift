@@ -50,12 +50,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         tbl_foods.delegate=self
         tbl_foods.dataSource=self
-        
-        if cartItems.count > 0{
-            btn_order.isHidden=false
-        }else{
-            btn_order.isHidden=true
-        }
+       
         
         displayTableView()
        
@@ -137,13 +132,15 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
        
     }
     func displayTableView(){
-        var count=cartItems.count
+       
         
-        if count > 0  {
+        if cartItems.count > 0  {
             tbl_cart.reloadData()
             tbl_cart.backgroundView=nil
+            btn_order.isHidden=false
         }else{
             displayNoDataTagOnCart()
+            btn_order.isHidden=true
         }
         if foodItem.count > 0 {
             tbl_foods.backgroundColor=nil
