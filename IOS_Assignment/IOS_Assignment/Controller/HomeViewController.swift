@@ -57,7 +57,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             btn_order.isHidden=true
         }
         
-   
+        displayTableView()
        
         // Do any additional setup after loading the view.
     }
@@ -76,6 +76,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+      
         if tableView == tbl_cart {
           
             let cell=tableView.dequeueReusableCell(withIdentifier: "CartTableViewCell", for: indexPath) as! CartTableViewCell
@@ -105,8 +106,55 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print("Appear")
-        tbl_cart.reloadData()
+        
+       
+        displayTableView()
+       
+    }
+    
+    func displayNoDataTagOnCart(){
+        let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+               messageLabel.text = "No Records Found !"
+               messageLabel.textColor = .black
+               messageLabel.numberOfLines = 0
+               messageLabel.textAlignment = .center
+               messageLabel.font = UIFont(name: "TrebuchetMS", size: 15)
+               messageLabel.sizeToFit()
+        tbl_cart.backgroundView = messageLabel
+        
+    }
+    
+    func displayNoDataTagOnFood(){
+        let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+               messageLabel.text = "No Records Found !"
+               messageLabel.textColor = .black
+               messageLabel.numberOfLines = 0
+               messageLabel.textAlignment = .center
+               messageLabel.font = UIFont(name: "TrebuchetMS", size: 15)
+               messageLabel.sizeToFit()
+       
+        tbl_foods.backgroundView=messageLabel
+       
+    }
+    func displayTableView(){
+        var count=cartItems.count
+        
+        if count > 0  {
+            tbl_cart.reloadData()
+            tbl_cart.backgroundView=nil
+        }else{
+            displayNoDataTagOnCart()
+        }
+        if foodItem.count > 0 {
+            tbl_foods.backgroundColor=nil
+        }else{
+            displayNoDataTagOnFood()
+        }
+       
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView()
     }
    
 
