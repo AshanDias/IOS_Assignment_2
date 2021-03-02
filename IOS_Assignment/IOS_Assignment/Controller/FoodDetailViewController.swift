@@ -8,9 +8,12 @@
 import UIKit
 var res = foodItem[currentIndex]
 class FoodDetailViewController: UIViewController {
+  
+    
    
     
     @IBOutlet  var btn_addCart:UIButton!
+    @IBOutlet var btn_back :UIButton!
     @IBOutlet var lbl_price:UILabel!
     @IBOutlet var lbl_name :UILabel!
     @IBOutlet var lbl_desc:UILabel!
@@ -34,17 +37,17 @@ class FoodDetailViewController: UIViewController {
     
     
     @IBAction func btnAddCartClick(_ sender: Any) {
-//        cartItems.append(Cart(item: res.foodName, price: String(res.foodPrice)))
-        cartItems.append(Cart(item: "Fruit", price: "600"))
-       
+        cartItems.append(Cart(item: res.foodName, price: String(res.foodPrice)))
+//        cartItems.append(Cart(item: "Fruit", price: "600"))
+//        cartItems.append(Cart(item: "Fruit TEst data", price: "700"))
+      
        
     }
     
     
-    override func viewDidDisappear(_ animated: Bool) {
-        print("i")
+    @IBAction func btn_back(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
-    
     /*
     // MARK: - Navigation
 

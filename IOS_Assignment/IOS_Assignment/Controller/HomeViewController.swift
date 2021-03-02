@@ -8,13 +8,14 @@
 import UIKit
 var currentIndex=0
 
-var cartItems: [Cart] = [
 //Cart(item: "Cake", price: "200"),
 //Cart(item: "Bun", price: "500"),
 //Cart(item: "Burger", price: "300"),
 //Cart(item: "Cocacola", price: "150"),
 //Cart(item: "Fruit", price: "600")
 
+ var cartItems: [Cart] = [
+   
 ]
 
 let foodItem: [FoodItem] = [
@@ -24,6 +25,8 @@ FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"), foodName: "Burge
 FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250),   FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250),   FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250),   FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250),   FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250),   FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250)
 
 ]
+
+
 class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
    
   
@@ -34,7 +37,6 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     @IBOutlet weak var btn_order: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         styleButton()
         
         let nib=UINib(nibName: "CartTableViewCell", bundle: nil)
@@ -91,8 +93,11 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        currentIndex=indexPath.row
-        performSegue(withIdentifier: "foodNavogator", sender: self)
+        if tableView == tbl_foods {
+            currentIndex=indexPath.row
+            performSegue(withIdentifier: "foodNavogator", sender: self)
+        }
+       
     }
     
     func styleButton()  {
@@ -100,11 +105,11 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print(cartItems)
-        print("a")
+        print("Appear")
+        tbl_cart.reloadData()
     }
-    
-    
+   
+
 //
 //    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 //
