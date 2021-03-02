@@ -34,6 +34,9 @@
                         <state key="normal" title="-">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
+                        <connections>
+                            <action selector="removeItem:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="xav-5z-2pR"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALS-bL-lSL">
                         <rect key="frame" x="204" y="80" width="0.0" height="0.0"/>
@@ -48,6 +51,9 @@
                         <state key="normal" title="+">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
+                        <connections>
+                            <action selector="addItem:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Kn1-r8-IZF"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4RW-am-LrJ">
                         <rect key="frame" x="239.5" y="83" width="6" height="15"/>
@@ -78,7 +84,7 @@
                 <outlet property="lbl_item" destination="I45-Gk-dhb" id="LpI-Jt-Spf"/>
                 <outlet property="lbl_price" destination="coy-ta-DsJ" id="hpw-6f-Dl8"/>
             </connections>
-            <point key="canvasLocation" x="18.115942028985508" y="155.69196428571428"/>
+            <point key="canvasLocation" x="-404" y="55"/>
         </tableViewCell>
     </objects>
 </document>

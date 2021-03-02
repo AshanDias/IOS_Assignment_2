@@ -33,4 +33,30 @@ class CartTableViewCell: UITableViewCell {
         lbl_item.font = .systemFont(ofSize: 12)
     }
     
+    @IBAction func removeItem(_ sender: Any) {
+        var countSub:Int
+        var price : Double
+        countSub = Int(lbl_count.text!)!
+        price = Double(lbl_price.text!)!
+        print(price)
+        if countSub >=  1 {
+            
+            price = price / Double(countSub)
+            countSub -= 1
+            lbl_count.text=String(countSub)
+            lbl_price.text=String(price)
+            
+        }
+        
+    }
+    @IBAction func addItem(_ sender: Any) {
+        var count :Int
+        var price : Double
+        count = Int(lbl_count.text!)!
+        price = Double(lbl_price.text!)!
+        count += 1
+        price = price * Double(count)
+        lbl_count.text=String(count)
+        lbl_price.text=String(price)
+    }
 }
