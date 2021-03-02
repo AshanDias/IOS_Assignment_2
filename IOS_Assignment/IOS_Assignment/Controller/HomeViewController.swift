@@ -98,6 +98,13 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     func styleButton()  {
         btn_order.layer.cornerRadius=17
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print(cartItems)
+        print("a")
+    }
+    
+    
 //
 //    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 //

@@ -347,6 +347,12 @@
                                     <action selector="btnAddCartClick:" destination="Qo3-cT-ZRz" eventType="touchUpInside" id="3jk-Iz-57J"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food  Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdh-wB-ruX">
+                                <rect key="frame" x="33" y="253" width="93" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Q6-Nt-ENp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -360,14 +366,17 @@
                             <constraint firstItem="IDc-hb-gPQ" firstAttribute="top" secondItem="eJa-8t-rnp" secondAttribute="bottom" constant="86" id="a22-98-Np6"/>
                             <constraint firstItem="W9C-an-KEo" firstAttribute="top" secondItem="IDc-hb-gPQ" secondAttribute="bottom" constant="12" id="ciM-64-aVj"/>
                             <constraint firstItem="eJa-8t-rnp" firstAttribute="leading" secondItem="6Q6-Nt-ENp" secondAttribute="leading" constant="20" id="fTE-Yn-Wjl"/>
+                            <constraint firstItem="zdh-wB-ruX" firstAttribute="leading" secondItem="6Q6-Nt-ENp" secondAttribute="leading" constant="33" id="kcp-oR-Oor"/>
+                            <constraint firstItem="zdh-wB-ruX" firstAttribute="top" secondItem="eJa-8t-rnp" secondAttribute="bottom" constant="57" id="nse-if-Jev"/>
                             <constraint firstItem="6Q6-Nt-ENp" firstAttribute="bottom" secondItem="Bpn-Xg-q8i" secondAttribute="bottom" constant="63" id="uex-p7-wmy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4cd-WA-LnR"/>
                     <connections>
-                        <outlet property="btn_addCart" destination="Bpn-Xg-q8i" id="nh2-4W-Tpa"/>
+                        <outlet property="btn_addCart" destination="Bpn-Xg-q8i" id="fet-lc-AUX"/>
                         <outlet property="img_image" destination="eJa-8t-rnp" id="GM3-Oe-sDe"/>
                         <outlet property="lbl_desc" destination="W9C-an-KEo" id="zMq-uc-QjC"/>
+                        <outlet property="lbl_name" destination="zdh-wB-ruX" id="3S2-WT-gBM"/>
                         <outlet property="lbl_price" destination="IDc-hb-gPQ" id="61c-pw-DKq"/>
                     </connections>
                 </viewController>

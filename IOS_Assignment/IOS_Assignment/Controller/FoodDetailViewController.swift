@@ -12,6 +12,7 @@ class FoodDetailViewController: UIViewController {
     
     @IBOutlet  var btn_addCart:UIButton!
     @IBOutlet var lbl_price:UILabel!
+    @IBOutlet var lbl_name :UILabel!
     @IBOutlet var lbl_desc:UILabel!
     @IBOutlet var img_image:UIImageView!
     override func viewDidLoad() {
@@ -35,8 +36,13 @@ class FoodDetailViewController: UIViewController {
     @IBAction func btnAddCartClick(_ sender: Any) {
 //        cartItems.append(Cart(item: res.foodName, price: String(res.foodPrice)))
         cartItems.append(Cart(item: "Fruit", price: "600"))
-      
-        
+       
+       
+    }
+    
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print("i")
     }
     
     /*
