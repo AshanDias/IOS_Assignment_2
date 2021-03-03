@@ -31,6 +31,7 @@ class CartTableViewCell: UITableViewCell {
     func setupView(cart : Cart) {
         lbl_price.text=cart.price
         lbl_item.text=cart.item
+        lbl_count.text = String(cart.unit)
         lbl_price.font = .systemFont(ofSize: 12)
         lbl_item.font = .systemFont(ofSize: 12)
     }
@@ -40,13 +41,21 @@ class CartTableViewCell: UITableViewCell {
         var price : Double
         countSub = Int(lbl_count.text!)!
         price = Double(lbl_price.text!)!
-        print(price)
+       
         if countSub >=  1 {
             
             price = price / Double(countSub)
             countSub -= 1
             lbl_count.text=String(countSub)
             lbl_price.text=String(price)
+            
+            var cart = cartItems.first(where:{ $0.item == lbl_item.text}) as! Cart
+        
+            cart.unit = countSub
+            cart.price=String(price)
+            let child=cart.id
+            let cartArray=cart.getJSON()
+            self.database.child("Cart").child(String(child!)).setValue(cartArray)
             
         }
         
@@ -67,7 +76,6 @@ class CartTableViewCell: UITableViewCell {
         cart.price=String(price)
         let child=cart.id
         let cartArray=cart.getJSON()
-        //print(cartArray)
         self.database.child("Cart").child(String(child!)).setValue(cartArray)
     }
     
