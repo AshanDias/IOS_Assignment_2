@@ -20,7 +20,7 @@ struct Cart {
            dict.setValue(item, forKey: "item")
            dict.setValue(price, forKey: "price")
             dict.setValue(unit, forKey: "unit")
-        dict.setValue(id, forKey: "id")
+            dict.setValue(id, forKey: "id")
            return dict
        }
 //    mutating func initWithDict(aDict: [String: AnyObject]) {

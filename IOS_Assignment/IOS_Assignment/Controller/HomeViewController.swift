@@ -86,12 +86,12 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
               
                 
                 dataChange.forEach({ (key,val) in
-                    print(key)
-                    let cart = Cart(item: val["item"] as! String, price: val["price"] as! String, unit: val["unit"] as! Int, id: key)
+                   
+                    let cart = Cart(item: val["item"] as! String, price: val["price"] as! String, unit: val["unit"] as! Int, id: val["id"] as! String? )
                     
-                 
+                 print("homeCart",cart)
                     cartItems.append(cart)
-                
+                    
                 })
               
                // print("Got data",snapshot.value!)
@@ -211,11 +211,11 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     override func viewDidAppear(_ animated: Bool) {
-      
+     
         while(true){
             
             if cartItems.count > 0 || cartCount == 0{
-                
+            
                 tbl_cart.reloadData()
                 tbl_cart.backgroundView=nil
                 btn_order.isHidden=false

@@ -51,6 +51,7 @@ class CartTableViewCell: UITableViewCell {
             
             var cart = cartItems.first(where:{ $0.item == lbl_item.text}) as! Cart
         
+            
             cart.unit = countSub
             cart.price=String(price)
             let child=cart.id
@@ -71,7 +72,7 @@ class CartTableViewCell: UITableViewCell {
         lbl_price.text=String(price)
         
         var cart = cartItems.first(where:{ $0.item == lbl_item.text}) as! Cart
-    
+      
         cart.unit = count
         cart.price=String(price)
         let child=cart.id
