@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 var currentIndex=0
+var cartCount = -1
 
 //Cart(item: "Cake", price: "200"),
 //Cart(item: "Bun", price: "500"),
@@ -56,7 +57,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
        
         DispatchQueue.main.async {
             
-            print("data")
+           
             self.LoadCart()
             
             self.displayTableView()
@@ -81,7 +82,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                 
                 let dataChange = snapshot.value as! [String:AnyObject]
               
-               
+                
               
                 
                 dataChange.forEach({ (key,val) in
@@ -89,12 +90,14 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                     cartItems.append(cart)
                 
                 })
-                
+                self.btn_order.isHidden=false
                 
                // print("Got data",snapshot.value!)
             }
             else {
-                print("No data available")
+               
+                cartCount = 0
+                
             }
             
            
@@ -206,16 +209,25 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        var i=0
+      
         while(true){
             
-            if cartItems.count > 0 || i == 100 {
-              
+            if cartItems.count > 0 || cartCount == 0{
+                
                 tbl_cart.reloadData()
+                tbl_cart.backgroundView=nil
+                btn_order.isHidden=false
+                if cartItems.count == 0 {
+                    displayNoDataTagOnCart()
+                    btn_order.isHidden=true
+                }
+              
                 break
             }
-            i+=1
+            
         }
+        
+        print("ct",cartItems.count)
     }
     
 //
