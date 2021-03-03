@@ -9,8 +9,8 @@ import  UIKit
 import Foundation
 
 struct Cart {
-    var item : String?
-    var price : String?
+    var item : String!
+    var price : String!
     var unit : Int
     
     func getJSON() -> NSMutableDictionary {
@@ -20,6 +20,11 @@ struct Cart {
         dict.setValue(unit, forKey: "unit")
            return dict
        }
+//    mutating func initWithDict(aDict: [String: AnyObject]) {
+//        self.item = aDict["item"] as! String
+//        self.price = aDict["price"] as! String
+//       }
+   
 }
 
 

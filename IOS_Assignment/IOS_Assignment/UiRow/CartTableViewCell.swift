@@ -5,10 +5,10 @@
 //  Created by Ashan Dias on 2021-03-01.
 //
 
-import UIKit
+import UIKit 
 
 class CartTableViewCell: UITableViewCell {
-
+    
     @IBOutlet var lbl_item:UILabel!
     @IBOutlet var lbl_price:UILabel!
     @IBOutlet var lbl_count:UILabel!
@@ -58,5 +58,8 @@ class CartTableViewCell: UITableViewCell {
         price = price * Double(count)
         lbl_count.text=String(count)
         lbl_price.text=String(price)
+        
+      
+        
     }
 }

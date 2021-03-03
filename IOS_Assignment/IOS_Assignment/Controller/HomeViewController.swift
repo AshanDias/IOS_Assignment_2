@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 var currentIndex=0
 
 //Cart(item: "Cake", price: "200"),
@@ -29,6 +30,8 @@ FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger
 
 class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
    
+    private let database = Database.database().reference()
+
   
 
     @IBOutlet var tbl_cart:UITableView!
@@ -51,12 +54,54 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         tbl_foods.delegate=self
         tbl_foods.dataSource=self
        
+        DispatchQueue.main.async {
+            
+            print("data")
+            self.LoadCart()
+            
+            self.displayTableView()
+        }
         
-        displayTableView()
+      
+        
+       
+    
        
         // Do any additional setup after loading the view.
     }
     
+    func LoadCart(){
+        
+        
+        self.database.child("Cart").getData { (error, snapshot) in
+            if let error = error {
+                print("Error getting data \(error)")
+            }
+            else if snapshot.exists() {
+                
+                let dataChange = snapshot.value as! [String:AnyObject]
+              
+               
+              
+                
+                dataChange.forEach({ (key,val) in
+                    let cart = Cart(item: val["item"] as! String, price: val["price"] as! String, unit: val["unit"] as! Int)
+                    cartItems.append(cart)
+                
+                })
+                
+                
+               // print("Got data",snapshot.value!)
+            }
+            else {
+                print("No data available")
+            }
+            
+           
+            
+        }
+       
+    }
    
     
     
@@ -75,6 +120,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         if tableView == tbl_cart {
           
             let cell=tableView.dequeueReusableCell(withIdentifier: "CartTableViewCell", for: indexPath) as! CartTableViewCell
+         
             cell.setupView(cart: cartItems[indexPath.row])
          
             return cell
@@ -132,7 +178,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
        
     }
     func displayTableView(){
-       
+      
         
         if cartItems.count > 0  {
             tbl_cart.reloadData()
@@ -159,7 +205,18 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         print("order")
     }
     
-    
+    override func viewDidAppear(_ animated: Bool) {
+        var i=0
+        while(true){
+            
+            if cartItems.count > 0 || i == 100 {
+              
+                tbl_cart.reloadData()
+                break
+            }
+            i+=1
+        }
+    }
     
 //
 //    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
