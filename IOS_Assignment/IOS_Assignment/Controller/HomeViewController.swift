@@ -10,11 +10,6 @@ import Firebase
 var currentIndex=0
 var cartCount = -1
 
-//Cart(item: "Cake", price: "200"),
-//Cart(item: "Bun", price: "500"),
-//Cart(item: "Burger", price: "300"),
-//Cart(item: "Cocacola", price: "150"),
-//Cart(item: "Fruit", price: "600")
 
  var cartItems: [Cart] = [
    

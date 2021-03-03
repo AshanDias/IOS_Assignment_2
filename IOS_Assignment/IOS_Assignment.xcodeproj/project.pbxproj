@@ -24,6 +24,8 @@
 		9849917B25E2187500CD4C63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9849917A25E2187500CD4C63 /* Assets.xcassets */; };
 		9849917E25E2187500CD4C63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9849917C25E2187500CD4C63 /* LaunchScreen.storyboard */; };
 		989709DB25F000CE00D1C0AB /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989709DA25F000CE00D1C0AB /* OrderViewController.swift */; };
+		989709E025F0054600D1C0AB /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989709DE25F0054600D1C0AB /* OrderTableViewCell.swift */; };
+		989709E125F0054600D1C0AB /* OrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 989709DF25F0054600D1C0AB /* OrderTableViewCell.xib */; };
 		98990F7425EB5D87006E37DF /* icons8-kitchen-room-96.png in Resources */ = {isa = PBXBuildFile; fileRef = 98990F7325EB5D87006E37DF /* icons8-kitchen-room-96.png */; };
 		98990F7C25EB63FB006E37DF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98990F7B25EB63FB006E37DF /* SignUpViewController.swift */; };
 		98990F7F25EB71FC006E37DF /* pin2x-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 98990F7E25EB71FC006E37DF /* pin2x-1.png */; };
@@ -52,6 +54,8 @@
 		9849917D25E2187500CD4C63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9849917F25E2187500CD4C63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		989709DA25F000CE00D1C0AB /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		989709DE25F0054600D1C0AB /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
+		989709DF25F0054600D1C0AB /* OrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderTableViewCell.xib; sourceTree = "<group>"; };
 		98990F7325EB5D87006E37DF /* icons8-kitchen-room-96.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-kitchen-room-96.png"; sourceTree = "<group>"; };
 		98990F7B25EB63FB006E37DF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		98990F7E25EB71FC006E37DF /* pin2x-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pin2x-1.png"; sourceTree = "<group>"; };
@@ -170,6 +174,8 @@
 				98337DF625ED0DB300C309D1 /* CartTableViewCell.xib */,
 				98337DFD25ED229D00C309D1 /* FoodsTableViewCell.swift */,
 				98337DFE25ED229D00C309D1 /* FoodsTableViewCell.xib */,
+				989709DE25F0054600D1C0AB /* OrderTableViewCell.swift */,
+				989709DF25F0054600D1C0AB /* OrderTableViewCell.xib */,
 			);
 			path = UiRow;
 			sourceTree = "<group>";
@@ -253,6 +259,7 @@
 				98990F7425EB5D87006E37DF /* icons8-kitchen-room-96.png in Resources */,
 				98337DF825ED0DB300C309D1 /* CartTableViewCell.xib in Resources */,
 				9849917B25E2187500CD4C63 /* Assets.xcassets in Resources */,
+				989709E125F0054600D1C0AB /* OrderTableViewCell.xib in Resources */,
 				98337E0725ED6E4200C309D1 /* hr.jpg in Resources */,
 				98990F8A25EB780F006E37DF /* layer-211@2x.png in Resources */,
 				9849917925E2187500CD4C63 /* Main.storyboard in Resources */,
@@ -321,6 +328,7 @@
 				98337DFB25ED21AF00C309D1 /* Foods.swift in Sources */,
 				9849917225E2187500CD4C63 /* AppDelegate.swift in Sources */,
 				98990F7C25EB63FB006E37DF /* SignUpViewController.swift in Sources */,
+				989709E025F0054600D1C0AB /* OrderTableViewCell.swift in Sources */,
 				9849917425E2187500CD4C63 /* SceneDelegate.swift in Sources */,
 				98990F9E25EB9D26006E37DF /* Cart.swift in Sources */,
 				98337DFF25ED229D00C309D1 /* FoodsTableViewCell.swift in Sources */,
