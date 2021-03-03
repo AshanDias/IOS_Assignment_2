@@ -11,6 +11,15 @@ import Foundation
 struct Cart {
     var item : String?
     var price : String?
+    var unit : Int
+    
+    func getJSON() -> NSMutableDictionary {
+           let dict = NSMutableDictionary()
+           dict.setValue(item, forKey: "item")
+           dict.setValue(price, forKey: "price")
+        dict.setValue(unit, forKey: "unit")
+           return dict
+       }
 }
 
 

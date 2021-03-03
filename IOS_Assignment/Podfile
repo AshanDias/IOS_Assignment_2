@@ -7,4 +7,5 @@ target 'IOS_Assignment' do
 
   # Pods for IOS_Assignment
 pod 'Firebase/Auth'
+pod 'Firebase/Database'
 end

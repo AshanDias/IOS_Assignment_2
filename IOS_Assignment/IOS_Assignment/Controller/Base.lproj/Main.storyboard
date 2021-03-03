@@ -278,6 +278,9 @@
                                 <state key="normal" title="Order">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnOrder:" destination="mAq-6a-xyf" eventType="touchUpInside" id="qSE-uh-pXH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gfX-31-V8e"/>

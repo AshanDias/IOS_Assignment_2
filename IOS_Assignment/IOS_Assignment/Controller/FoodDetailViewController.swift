@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import Firebase
+
 var res = foodItem[currentIndex]
 class FoodDetailViewController: UIViewController {
   
     
-   
+    private let database = Database.database().reference()
     
     @IBOutlet  var btn_addCart:UIButton!
     @IBOutlet var btn_back :UIButton!
@@ -37,7 +39,12 @@ class FoodDetailViewController: UIViewController {
     
     
     @IBAction func btnAddCartClick(_ sender: Any) {
-        cartItems.append(Cart(item: res.foodName, price: String(res.foodPrice)))
+        cartItems.append(Cart(item: res.foodName, price: String(res.foodPrice), unit: 0))
+        
+        let cart =  Cart(item: res.foodName, price: String(res.foodPrice), unit: 0)
+        
+        let cartArray=cart.getJSON()
+        self.database.child("Cart").child("Item\(Int.random(in: 1...100))").setValue(cartArray)
         dismiss(animated: true, completion: nil)
       
        
