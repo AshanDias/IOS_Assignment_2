@@ -86,12 +86,14 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
               
                 
                 dataChange.forEach({ (key,val) in
-                    let cart = Cart(item: val["item"] as! String, price: val["price"] as! String, unit: val["unit"] as! Int)
+                    print(key)
+                    let cart = Cart(item: val["item"] as! String, price: val["price"] as! String, unit: val["unit"] as! Int, id: key)
+                    
+                 
                     cartItems.append(cart)
                 
                 })
-                self.btn_order.isHidden=false
-                
+              
                // print("Got data",snapshot.value!)
             }
             else {
@@ -227,7 +229,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             
         }
         
-        print("ct",cartItems.count)
+       
     }
     
 //

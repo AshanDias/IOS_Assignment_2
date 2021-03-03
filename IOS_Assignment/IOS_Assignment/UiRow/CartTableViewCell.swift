@@ -5,9 +5,11 @@
 //  Created by Ashan Dias on 2021-03-01.
 //
 
-import UIKit 
+import UIKit
+import Firebase
 
 class CartTableViewCell: UITableViewCell {
+    private let database = Database.database().reference()
     
     @IBOutlet var lbl_item:UILabel!
     @IBOutlet var lbl_price:UILabel!
@@ -59,7 +61,15 @@ class CartTableViewCell: UITableViewCell {
         lbl_count.text=String(count)
         lbl_price.text=String(price)
         
-      
-        
+        var cart = cartItems.first(where:{ $0.item == lbl_item.text}) as! Cart
+    
+        cart.unit = count
+        cart.price=String(price)
+        let child=cart.id
+        let cartArray=cart.getJSON()
+        //print(cartArray)
+        self.database.child("Cart").child(String(child!)).setValue(cartArray)
     }
+    
+
 }

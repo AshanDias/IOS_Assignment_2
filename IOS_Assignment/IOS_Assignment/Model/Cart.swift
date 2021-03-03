@@ -9,15 +9,18 @@ import  UIKit
 import Foundation
 
 struct Cart {
+   
     var item : String!
     var price : String!
     var unit : Int
+    var id : String!
     
     func getJSON() -> NSMutableDictionary {
            let dict = NSMutableDictionary()
            dict.setValue(item, forKey: "item")
            dict.setValue(price, forKey: "price")
-        dict.setValue(unit, forKey: "unit")
+            dict.setValue(unit, forKey: "unit")
+        dict.setValue(id, forKey: "id")
            return dict
        }
 //    mutating func initWithDict(aDict: [String: AnyObject]) {
