@@ -23,6 +23,7 @@
 		9849917925E2187500CD4C63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9849917725E2187500CD4C63 /* Main.storyboard */; };
 		9849917B25E2187500CD4C63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9849917A25E2187500CD4C63 /* Assets.xcassets */; };
 		9849917E25E2187500CD4C63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9849917C25E2187500CD4C63 /* LaunchScreen.storyboard */; };
+		989709DB25F000CE00D1C0AB /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989709DA25F000CE00D1C0AB /* OrderViewController.swift */; };
 		98990F7425EB5D87006E37DF /* icons8-kitchen-room-96.png in Resources */ = {isa = PBXBuildFile; fileRef = 98990F7325EB5D87006E37DF /* icons8-kitchen-room-96.png */; };
 		98990F7C25EB63FB006E37DF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98990F7B25EB63FB006E37DF /* SignUpViewController.swift */; };
 		98990F7F25EB71FC006E37DF /* pin2x-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 98990F7E25EB71FC006E37DF /* pin2x-1.png */; };
@@ -50,6 +51,7 @@
 		9849917A25E2187500CD4C63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9849917D25E2187500CD4C63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9849917F25E2187500CD4C63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		989709DA25F000CE00D1C0AB /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		98990F7325EB5D87006E37DF /* icons8-kitchen-room-96.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-kitchen-room-96.png"; sourceTree = "<group>"; };
 		98990F7B25EB63FB006E37DF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		98990F7E25EB71FC006E37DF /* pin2x-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pin2x-1.png"; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 		98990F7025EB5A56006E37DF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9849917725E2187500CD4C63 /* Main.storyboard */,
 				9849917C25E2187500CD4C63 /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -143,11 +146,11 @@
 			isa = PBXGroup;
 			children = (
 				9849917525E2187500CD4C63 /* ViewController.swift */,
-				9849917725E2187500CD4C63 /* Main.storyboard */,
 				98990F7B25EB63FB006E37DF /* SignUpViewController.swift */,
 				98990F8625EB73D1006E37DF /* LocationViewController.swift */,
 				98337DF225ED0B7000C309D1 /* HomeViewController.swift */,
 				98337E0325ED656E00C309D1 /* FoodDetailViewController.swift */,
+				989709DA25F000CE00D1C0AB /* OrderViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			files = (
 				98990F9625EB8D09006E37DF /* LocationService.swift in Sources */,
 				98990F8725EB73D1006E37DF /* LocationViewController.swift in Sources */,
+				989709DB25F000CE00D1C0AB /* OrderViewController.swift in Sources */,
 				9849917625E2187500CD4C63 /* ViewController.swift in Sources */,
 				98337E0425ED656E00C309D1 /* FoodDetailViewController.swift in Sources */,
 				98337DF725ED0DB300C309D1 /* CartTableViewCell.swift in Sources */,

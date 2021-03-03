@@ -207,7 +207,8 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
    
     @IBAction func btnOrder(_ sender: Any) {
         
-        print("order")
+        performSegue(withIdentifier: "orderNav", sender: self)
+       
     }
     
     override func viewDidAppear(_ animated: Bool) {
