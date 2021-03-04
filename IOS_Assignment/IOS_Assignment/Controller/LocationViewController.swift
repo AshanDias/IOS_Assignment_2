@@ -11,7 +11,10 @@ class LocationViewController: UIViewController {
     @IBOutlet weak var locationButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupButtonStyle();
+        
+      
       
     }
     
@@ -20,6 +23,13 @@ class LocationViewController: UIViewController {
     
         locationButton.layer.cornerRadius = 20
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let location=LocationService()
+        location.isLocationAccessEnabled()
+      
+       // performSegue(withIdentifier: "mainSC", sender: self)
     }
 
     /*

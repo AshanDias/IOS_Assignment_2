@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mAq-6a-xyf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VKa-TS-prj">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -181,7 +181,7 @@
         <!--LocationViewController-->
         <scene sceneID="8H1-oc-cgJ">
             <objects>
-                <viewController title="LocationViewController" id="VKa-TS-prj" customClass="LocationViewController" customModule="IOS_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="LocationViewController" modalPresentationStyle="fullScreen" id="VKa-TS-prj" customClass="LocationViewController" customModule="IOS_Assignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ahb-n6-N4E">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -228,6 +228,7 @@
                     </view>
                     <connections>
                         <outlet property="locationButton" destination="Qf8-Mz-Zyy" id="foP-Y4-YAc"/>
+                        <segue destination="mAq-6a-xyf" kind="show" identifier="mainSC" id="2JA-y2-DY2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uq1-Wd-h9k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -322,7 +323,7 @@
         <!--HomeViewController-->
         <scene sceneID="uIb-AM-68j">
             <objects>
-                <viewController id="mAq-6a-xyf" userLabel="HomeViewController" customClass="HomeViewController" customModule="IOS_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="mAq-6a-xyf" userLabel="HomeViewController" customClass="HomeViewController" customModule="IOS_Assignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="feO-xA-QX3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -369,6 +370,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="k9t-u9-yG2"/>
+                    <navigationItem key="navigationItem" id="Kvd-WT-pKu"/>
                     <connections>
                         <outlet property="btn_order" destination="Ofx-iK-f3X" id="LMV-Pv-JIz"/>
                         <outlet property="tbl_cart" destination="f9c-jT-W1t" id="vjs-mO-aqm"/>

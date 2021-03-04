@@ -16,13 +16,14 @@ enum Result<T> {
 
 final class LocationService: NSObject {
     private let manager: CLLocationManager
-    
+
     init(manager: CLLocationManager = .init()) {
         self.manager = manager
         super.init()
         
         manager.delegate = self
     }
+ 
     
     var newLocation: ((Result<CLLocation>) -> Void)?
     var didChangeStatus: ((Bool) -> Void)?
@@ -32,11 +33,34 @@ final class LocationService: NSObject {
     }
     
     func requestLocationAuthrization() {
+       
         manager.requestAlwaysAuthorization();
+      
     }
     
     func getLocation() {
         manager.requestLocation()
+    }
+    
+    func isLocationAccessEnabled() {
+       if CLLocationManager.locationServicesEnabled() {
+      
+          switch CLLocationManager.authorizationStatus() {
+          case .notDetermined, .restricted, .denied  : do {
+            requestLocationAuthrization()
+          
+            print("No access")
+            break
+                  }
+          case .authorizedAlways, .authorizedWhenInUse:do {
+            print("Access")
+            break
+          }
+               
+          }
+       } else {
+          print("Location services not enabled")
+       }
     }
 }
 
