@@ -268,6 +268,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-kitchen-room-96.png" translatesAutoresizingMaskIntoConstraints="NO" id="bSJ-IB-77v">
+                                <rect key="frame" x="20" y="61" width="99" height="94"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="94" id="VkG-zi-hUS"/>
+                                    <constraint firstAttribute="width" constant="99" id="Xh6-CJ-q6P"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01I-39-XoG">
+                                <rect key="frame" x="163" y="79" width="86" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact No" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3Q-yC-6aL">
+                                <rect key="frame" x="177" y="110" width="65" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P76-4r-HEF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -275,12 +294,18 @@
                             <constraint firstItem="P76-4r-HEF" firstAttribute="trailing" secondItem="Kwk-wL-YXH" secondAttribute="trailing" constant="39" id="1d0-a4-9lS"/>
                             <constraint firstItem="P76-4r-HEF" firstAttribute="trailing" secondItem="tm8-dO-4pd" secondAttribute="trailing" constant="20" id="5C8-7h-5zL"/>
                             <constraint firstItem="Eaq-VK-IFm" firstAttribute="centerY" secondItem="akn-XG-ys9" secondAttribute="centerY" id="5oF-9H-Xdv"/>
+                            <constraint firstItem="Y3Q-yC-6aL" firstAttribute="leading" secondItem="bSJ-IB-77v" secondAttribute="trailing" constant="58" id="7dH-zv-G43"/>
                             <constraint firstItem="Eaq-VK-IFm" firstAttribute="leading" secondItem="P76-4r-HEF" secondAttribute="leading" constant="20" id="7pt-rU-CBw"/>
                             <constraint firstItem="P76-4r-HEF" firstAttribute="bottom" secondItem="Kwk-wL-YXH" secondAttribute="bottom" constant="50" id="86f-jI-zCZ"/>
+                            <constraint firstItem="01I-39-XoG" firstAttribute="top" secondItem="P76-4r-HEF" secondAttribute="top" constant="79" id="9Xs-GC-zSy"/>
                             <constraint firstItem="P76-4r-HEF" firstAttribute="trailing" secondItem="Eaq-VK-IFm" secondAttribute="trailing" constant="20" id="CdV-Wp-ofO"/>
                             <constraint firstItem="Kwk-wL-YXH" firstAttribute="top" secondItem="tm8-dO-4pd" secondAttribute="bottom" constant="30" id="OgX-GR-ycu"/>
                             <constraint firstItem="Kwk-wL-YXH" firstAttribute="top" secondItem="tm8-dO-4pd" secondAttribute="bottom" constant="30" id="TKY-wz-gYf"/>
+                            <constraint firstItem="01I-39-XoG" firstAttribute="leading" secondItem="bSJ-IB-77v" secondAttribute="trailing" constant="44" id="TLQ-Nw-JzV"/>
                             <constraint firstItem="P76-4r-HEF" firstAttribute="bottom" secondItem="Eaq-VK-IFm" secondAttribute="bottom" constant="235" id="ffk-0K-VoL"/>
+                            <constraint firstItem="bSJ-IB-77v" firstAttribute="leading" secondItem="P76-4r-HEF" secondAttribute="leading" constant="20" id="myV-Lt-6Mc"/>
+                            <constraint firstItem="Y3Q-yC-6aL" firstAttribute="top" secondItem="01I-39-XoG" secondAttribute="bottom" constant="10.5" id="pe2-HV-fJ3"/>
+                            <constraint firstItem="Eaq-VK-IFm" firstAttribute="top" secondItem="bSJ-IB-77v" secondAttribute="bottom" constant="80" id="quV-ym-l5a"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="OQ8-fl-C6p"/>
@@ -292,7 +317,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bKx-4Z-9tz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2660" y="-558"/>
+            <point key="canvasLocation" x="2660" y="-558.17091454272872"/>
         </scene>
         <!--HomeViewController-->
         <scene sceneID="uIb-AM-68j">
