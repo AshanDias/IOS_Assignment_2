@@ -18,7 +18,7 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
         
         tbl_orderCart.delegate=self
         tbl_orderCart.dataSource=self
-        
+      
         // Do any additional setup after loading the view.
     }
    
@@ -34,7 +34,7 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell=tableView.dequeueReusableCell(withIdentifier: "OrderTableViewCell", for: indexPath) as! OrderTableViewCell
-       print(cartItems)
+      
         cell.setupView(cart: cartItems[indexPath.row])
        
         return cell

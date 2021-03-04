@@ -30,6 +30,7 @@ class OrderTableViewCell: UITableViewCell {
         lblCount.text = String(cart.unit)
         lblPrice.font = .systemFont(ofSize: 12)
         lblItem.font = .systemFont(ofSize: 12)
+        lblCount.font = .systemFont(ofSize: 12)
          
     }
     
