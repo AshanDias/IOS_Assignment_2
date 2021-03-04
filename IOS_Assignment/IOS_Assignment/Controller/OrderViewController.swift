@@ -34,9 +34,15 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell=tableView.dequeueReusableCell(withIdentifier: "OrderTableViewCell", for: indexPath) as! OrderTableViewCell
-      
+     
+        var itemCount=cartItems.count
+        if indexPath.row == itemCount - 1{
+           //Perform action
+            cell.setupLastRow(cart: cartItems)
+            print("come",indexPath.row)
+        }
         cell.setupView(cart: cartItems[indexPath.row])
-       
+      
         return cell
     }
     

@@ -34,4 +34,14 @@ class OrderTableViewCell: UITableViewCell {
          
     }
     
+    func setupLastRow(cart : [Cart]){
+        
+        cart.forEach({ (val) in
+            
+            //print("reached last",val)
+        
+        })
+       
+    }
+    
 }
