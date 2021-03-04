@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qIS-gm-GSE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mAq-6a-xyf">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -234,10 +234,10 @@
             </objects>
             <point key="canvasLocation" x="-722" y="-732"/>
         </scene>
-        <!--FoodViewController-->
+        <!--OrderViewController-->
         <scene sceneID="Ngz-uB-Erl">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="58w-jo-6mD" userLabel="FoodViewController" customClass="OrderViewController" customModule="IOS_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="58w-jo-6mD" userLabel="OrderViewController" customClass="OrderViewController" customModule="IOS_Assignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="akn-XG-ys9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -317,7 +317,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bKx-4Z-9tz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2593" y="-473"/>
+            <point key="canvasLocation" x="1791" y="-137"/>
         </scene>
         <!--HomeViewController-->
         <scene sceneID="uIb-AM-68j">
@@ -335,11 +335,11 @@
                                 </constraints>
                             </tableView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vfH-ZH-St6">
-                                <rect key="frame" x="10" y="105" width="355" height="473"/>
+                                <rect key="frame" x="10" y="105" width="355" height="522"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ofx-iK-f3X">
-                                <rect key="frame" x="120" y="577" width="135" height="41"/>
+                                <rect key="frame" x="120" y="626" width="135" height="41"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="m23-ZZ-16m"/>
@@ -378,7 +378,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TjX-PS-VFr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2444" y="-1335"/>
+            <point key="canvasLocation" x="862" y="-897"/>
         </scene>
         <!--FoodDetailViewController-->
         <scene sceneID="FJW-qs-LfA">
@@ -466,7 +466,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tMy-Kf-3gD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3285.5999999999999" y="-1318.2908545727137"/>
+            <point key="canvasLocation" x="1873" y="-1102"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="jx7-cM-V6x">
@@ -477,19 +477,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
-                    <connections>
-                        <segue destination="mAq-6a-xyf" kind="relationship" relationship="viewControllers" id="vU9-9g-NfK"/>
-                        <segue destination="58w-jo-6mD" kind="relationship" relationship="viewControllers" id="9Ke-eh-H8G"/>
-                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ulp-pY-8Ma" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1309" y="-871"/>
+            <point key="canvasLocation" x="5442" y="-423"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="sIb-cj-WsU"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="icons8-kitchen-room-96.png" width="96" height="96"/>
         <image name="layer-211.png" width="492" height="204.5"/>

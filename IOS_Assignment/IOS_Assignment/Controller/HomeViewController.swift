@@ -84,7 +84,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                    
                     let cart = Cart(item: val["item"] as! String, price: val["price"] as! String, unit: val["unit"] as! Int, id: val["id"] as! String? )
                     
-                 print("homeCart",cart)
+                
                     cartItems.append(cart)
                     
                 })

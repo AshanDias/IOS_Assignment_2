@@ -30,12 +30,14 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
         tbl_orderCart.delegate=self
         tbl_orderCart.dataSource=self
       
-      
+       
         LoadCart()
+       
         // Do any additional setup after loading the view.
     }
-   
     
+   
+   
     func LoadCart(){
         
         
@@ -54,7 +56,7 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
                    
                     let cart = Cart(item: val["item"] as! String, price: val["price"] as! String, unit: val["unit"] as! Int, id: val["id"] as! String? )
                     
-                 print("homeCart",cart)
+              
                     self.cartData.append(cart)
                     
                 })// print("Got data",snapshot.value!)
@@ -86,6 +88,7 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
             
         }
         calculateTotalValue()
+      
 
     }
     
@@ -121,7 +124,7 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
 
         return cell
     }
-    
+   
 
   
     /*
