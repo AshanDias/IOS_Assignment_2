@@ -207,7 +207,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     override func viewDidAppear(_ animated: Bool) {
-     
+        
         while(true){
             
             if cartItems.count > 0 || cartCount == 0{

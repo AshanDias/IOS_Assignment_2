@@ -6,9 +6,18 @@
 //
 
 import UIKit
-
+import Firebase
+var count = -1
 class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
    
+    private let database = Database.database().reference()
+    
+    
+    var cartData: [Cart] = [
+      
+   ]
+
+    
     @IBOutlet var tbl_orderCart:UITableView!
     @IBOutlet var lbl_total:UILabel!
     
@@ -21,8 +30,68 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
         tbl_orderCart.delegate=self
         tbl_orderCart.dataSource=self
       
+      
+        LoadCart()
+        // Do any additional setup after loading the view.
+    }
+   
+    
+    func LoadCart(){
+        
+        
+        self.database.child("Cart").getData { (error, snapshot) in
+            if let error = error {
+                print("Error getting data \(error)")
+            }
+            else if snapshot.exists() {
+                
+                let dataChange = snapshot.value as! [String:AnyObject]
+              
+                
+              
+                
+                dataChange.forEach({ (key,val) in
+                   
+                    let cart = Cart(item: val["item"] as! String, price: val["price"] as! String, unit: val["unit"] as! Int, id: val["id"] as! String? )
+                    
+                 print("homeCart",cart)
+                    self.cartData.append(cart)
+                    
+                })// print("Got data",snapshot.value!)
+            } else {
+                
+                count = 0
+                
+            }
+         
+           
+            
+        }
+       
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        while(true){
+            
+            if cartData.count > 0 || count == 0{
+            
+                tbl_orderCart.reloadData()
+                tbl_orderCart.backgroundView=nil
+              
+              
+              
+                break
+            }
+            
+        }
+        calculateTotalValue()
+
+    }
+    
+    func calculateTotalValue(){
         var total=Double()
-        let cart=cartItems
+        let cart=cartData
         cart.forEach({ (val) in
             total += Double(val.price)!
             //print("reached last",val)
@@ -30,24 +99,24 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
         })
         
         lbl_total.text=String(total)
-        // Do any additional setup after loading the view.
     }
-   
+    
     @IBAction func btnBack(_ sender: Any)
     {
+        cartItems=cartData
         dismiss(animated: true, completion: nil)
     }
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cartItems.count
+        return cartData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell=tableView.dequeueReusableCell(withIdentifier: "OrderTableViewCell", for: indexPath) as! OrderTableViewCell
       
        
-        cell.setupView(cart: cartItems[indexPath.row])
+        cell.setupView(cart: cartData[indexPath.row])
        
 
         return cell
