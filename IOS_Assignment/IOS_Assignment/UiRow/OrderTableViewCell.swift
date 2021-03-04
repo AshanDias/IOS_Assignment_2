@@ -34,14 +34,18 @@ class OrderTableViewCell: UITableViewCell {
          
     }
     
-    func setupLastRow(cart : [Cart]){
-        
-        cart.forEach({ (val) in
-            
-            //print("reached last",val)
-        
-        })
-       
-    }
-    
+//    func setupLastRow(cart : [Cart]){
+//
+//        var total=Double()
+//        cart.forEach({ (val) in
+//            total += Double(val.price)!
+//            //print("reached last",val)
+//
+//        })
+//        lblItem.text=""
+//        lblCount.text = ""
+//        lblPrice.text=String(total)
+//       //print("total",total)
+//    }
+//
 }

@@ -256,19 +256,37 @@
                                 <rect key="frame" x="20" y="235" width="335" height="197"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kwk-wL-YXH">
+                                <rect key="frame" x="294" y="596" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tm8-dO-4pd">
+                                <rect key="frame" x="275" y="545" width="80" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P76-4r-HEF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="P76-4r-HEF" firstAttribute="trailing" secondItem="Kwk-wL-YXH" secondAttribute="trailing" constant="39" id="1d0-a4-9lS"/>
+                            <constraint firstItem="P76-4r-HEF" firstAttribute="trailing" secondItem="tm8-dO-4pd" secondAttribute="trailing" constant="20" id="5C8-7h-5zL"/>
                             <constraint firstItem="Eaq-VK-IFm" firstAttribute="centerY" secondItem="akn-XG-ys9" secondAttribute="centerY" id="5oF-9H-Xdv"/>
                             <constraint firstItem="Eaq-VK-IFm" firstAttribute="leading" secondItem="P76-4r-HEF" secondAttribute="leading" constant="20" id="7pt-rU-CBw"/>
+                            <constraint firstItem="P76-4r-HEF" firstAttribute="bottom" secondItem="Kwk-wL-YXH" secondAttribute="bottom" constant="50" id="86f-jI-zCZ"/>
                             <constraint firstItem="P76-4r-HEF" firstAttribute="trailing" secondItem="Eaq-VK-IFm" secondAttribute="trailing" constant="20" id="CdV-Wp-ofO"/>
+                            <constraint firstItem="Kwk-wL-YXH" firstAttribute="top" secondItem="tm8-dO-4pd" secondAttribute="bottom" constant="30" id="OgX-GR-ycu"/>
+                            <constraint firstItem="Kwk-wL-YXH" firstAttribute="top" secondItem="tm8-dO-4pd" secondAttribute="bottom" constant="30" id="TKY-wz-gYf"/>
                             <constraint firstItem="P76-4r-HEF" firstAttribute="bottom" secondItem="Eaq-VK-IFm" secondAttribute="bottom" constant="235" id="ffk-0K-VoL"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="OQ8-fl-C6p"/>
                     <navigationItem key="navigationItem" id="AE1-zM-531"/>
                     <connections>
+                        <outlet property="lbl_total" destination="Kwk-wL-YXH" id="L4v-Eb-hwN"/>
                         <outlet property="tbl_orderCart" destination="Eaq-VK-IFm" id="B8W-0B-MJP"/>
                     </connections>
                 </viewController>

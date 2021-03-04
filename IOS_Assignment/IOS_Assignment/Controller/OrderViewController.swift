@@ -10,6 +10,8 @@ import UIKit
 class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
    
     @IBOutlet var tbl_orderCart:UITableView!
+    @IBOutlet var lbl_total:UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +21,15 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
         tbl_orderCart.delegate=self
         tbl_orderCart.dataSource=self
       
+        var total=Double()
+        let cart=cartItems
+        cart.forEach({ (val) in
+            total += Double(val.price)!
+            //print("reached last",val)
+        
+        })
+        
+        lbl_total.text=String(total)
         // Do any additional setup after loading the view.
     }
    
@@ -34,15 +45,11 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell=tableView.dequeueReusableCell(withIdentifier: "OrderTableViewCell", for: indexPath) as! OrderTableViewCell
-     
-        var itemCount=cartItems.count
-        if indexPath.row == itemCount - 1{
-           //Perform action
-            cell.setupLastRow(cart: cartItems)
-            print("come",indexPath.row)
-        }
-        cell.setupView(cart: cartItems[indexPath.row])
       
+       
+        cell.setupView(cart: cartItems[indexPath.row])
+       
+
         return cell
     }
     
