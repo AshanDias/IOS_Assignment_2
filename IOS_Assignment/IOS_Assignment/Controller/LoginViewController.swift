@@ -26,10 +26,30 @@ var isEnableLocation=false
        performSegue(withIdentifier: "signupNavigator", sender: self)
     }
     @IBAction func btnLogin(_ sender: Any) {
+        
+        Auth.auth().signIn(withEmail: txt_un.text!, password: txt_pwd.text!) { [weak self] authResult, error in
+            guard let user = authResult?.user, error == nil else {
+                createAlert(title: "Error", message: error!.localizedDescription)
+                print(error)
+                           return
+                }
+            self!.performSegue(withIdentifier: "homeIdentifire", sender: self)
+            
+        }
+        
+        func createAlert(title:String, message:String){
+            let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        
         if isEnableLocation {
+            let email=txt_un.text!
+            let pwd=txt_pwd.text!
             //start login
           
-//            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+//            Auth.auth().createUser(withEmail:email , password: pwd) { authResult, error in
 //                       // [START_EXCLUDE]
 //                guard let strongSelf = self else { return }
 //                strongSelf.hideSpinner {
@@ -42,10 +62,10 @@ var isEnableLocation=false
 //                       }
 //                       // [END_EXCLUDE]
 //                     }
-            //end login
-            performSegue(withIdentifier: "homeIdentifire", sender: self)
+//            end login
+           // performSegue(withIdentifier: "homeIdentifire", sender: self)
         }else{
-            performSegue(withIdentifier: "locationIdentifire", sender: self)
+           // performSegue(withIdentifier: "locationIdentifire", sender: self)
         }
     }
     

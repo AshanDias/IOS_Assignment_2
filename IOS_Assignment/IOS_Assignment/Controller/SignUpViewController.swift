@@ -6,9 +6,15 @@
 //
 
 import UIKit
+import Firebase
 
 class SignUpViewController: UIViewController {
 
+    @IBOutlet var lbl_message:UILabel!
+    @IBOutlet var txt_un:UITextField!
+    @IBOutlet var txt_pwd:UITextField!
+    @IBOutlet var txt_confirmPwd:UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,6 +23,22 @@ class SignUpViewController: UIViewController {
     
     @IBAction func onClickSignUp(_ sender: Any) {
         //do sign up
+       
+        if txt_pwd.text == txt_confirmPwd.text {
+            
+            Auth.auth().createUser(withEmail: txt_un.text!, password: txt_pwd.text!) { authResult, error in
+                guard let user = authResult?.user, error == nil else {
+                    self.lbl_message.text=error!.localizedDescription
+                    print(error)
+                               return
+                    }
+                self.lbl_message.text=user.email
+            }
+        }else{
+            lbl_message.text="Confirm password does not matched!"
+        }
+     
+
        
     }
     
