@@ -10,7 +10,7 @@ import Firebase
 
 class SignUpViewController: UIViewController {
 
-    @IBOutlet var lbl_message:UILabel!
+   
     @IBOutlet var txt_un:UITextField!
     @IBOutlet var txt_pwd:UITextField!
     @IBOutlet var txt_confirmPwd:UITextField!
@@ -28,18 +28,25 @@ class SignUpViewController: UIViewController {
             
             Auth.auth().createUser(withEmail: txt_un.text!, password: txt_pwd.text!) { authResult, error in
                 guard let user = authResult?.user, error == nil else {
-                    self.lbl_message.text=error!.localizedDescription
-                    print(error)
+                   
+                    self.createAlert(title: "Error", message: error!.localizedDescription)
                                return
                     }
-                self.lbl_message.text=user.email
+                self.performSegue(withIdentifier: "signupNavHome", sender: self)
             }
         }else{
-            lbl_message.text="Confirm password does not matched!"
+            self.createAlert(title: "Error", message: "Confirm password does not matched!")
+          
         }
      
 
        
+    }
+    
+    func createAlert(title:String, message:String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
  

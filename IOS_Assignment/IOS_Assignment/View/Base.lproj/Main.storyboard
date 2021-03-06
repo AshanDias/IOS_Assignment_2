@@ -108,7 +108,7 @@
         <!--SignUpController-->
         <scene sceneID="5Wa-UE-9cd">
             <objects>
-                <viewController id="iVT-Ft-MRG" userLabel="SignUpController" customClass="SignUpViewController" customModule="IOS_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="iVT-Ft-MRG" userLabel="SignUpController" customClass="SignUpViewController" customModule="IOS_Assignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4F8-hb-dHY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -159,21 +159,13 @@
                                     <action selector="cancel:" destination="iVT-Ft-MRG" eventType="touchUpInside" id="MEG-xF-KEV"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJm-he-dn4">
-                                <rect key="frame" x="187.5" y="196" width="0.0" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemPinkColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yUr-PD-pB7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="4iM-Rg-AmQ" firstAttribute="top" secondItem="Wdh-aX-D6n" secondAttribute="bottom" constant="30" id="2V7-9P-ivb"/>
-                            <constraint firstItem="WJm-he-dn4" firstAttribute="centerX" secondItem="4F8-hb-dHY" secondAttribute="centerX" id="38Y-wm-TpI"/>
                             <constraint firstItem="4iM-Rg-AmQ" firstAttribute="centerX" secondItem="4F8-hb-dHY" secondAttribute="centerX" id="4Pf-d2-mgC"/>
                             <constraint firstItem="PEe-mL-Avx" firstAttribute="centerX" secondItem="4F8-hb-dHY" secondAttribute="centerX" id="8ny-bn-SZE"/>
-                            <constraint firstItem="WJm-he-dn4" firstAttribute="top" secondItem="PEe-mL-Avx" secondAttribute="bottom" constant="8" id="IHr-zj-fvt"/>
                             <constraint firstItem="CeJ-8K-FgR" firstAttribute="leading" secondItem="yUr-PD-pB7" secondAttribute="leading" constant="30" id="Kc2-OU-dxe"/>
                             <constraint firstItem="yUr-PD-pB7" firstAttribute="trailing" secondItem="4iM-Rg-AmQ" secondAttribute="trailing" constant="30" id="MFn-Fz-5ug"/>
                             <constraint firstItem="PEe-mL-Avx" firstAttribute="top" secondItem="yUr-PD-pB7" secondAttribute="top" constant="60" id="S3Q-9Z-iK0"/>
@@ -186,15 +178,14 @@
                             <constraint firstItem="yUr-PD-pB7" firstAttribute="trailing" secondItem="PEe-mL-Avx" secondAttribute="trailing" constant="43" id="piJ-fQ-jU5"/>
                             <constraint firstItem="Wdh-aX-D6n" firstAttribute="top" secondItem="PEe-mL-Avx" secondAttribute="bottom" constant="50" id="reH-wu-VXH"/>
                             <constraint firstItem="yUr-PD-pB7" firstAttribute="trailing" secondItem="Wdh-aX-D6n" secondAttribute="trailing" constant="30" id="tMs-jb-maa"/>
-                            <constraint firstItem="Wdh-aX-D6n" firstAttribute="top" secondItem="WJm-he-dn4" secondAttribute="bottom" constant="21" id="xsd-mg-9mO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jLw-9X-Wjw"/>
                     <connections>
-                        <outlet property="lbl_message" destination="WJm-he-dn4" id="Nqf-nm-H4P"/>
                         <outlet property="txt_confirmPwd" destination="d1K-cJ-QZW" id="3tl-Ob-hIu"/>
                         <outlet property="txt_pwd" destination="HTZ-ds-zy6" id="O4b-P2-dMH"/>
                         <outlet property="txt_un" destination="WMq-if-XhL" id="0fS-ZN-YDx"/>
+                        <segue destination="mAq-6a-xyf" kind="show" identifier="signupNavHome" id="fJX-kf-SO8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hTr-d2-TgP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -513,7 +504,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sCg-1M-6yM"/>
+        <segue reference="fJX-kf-SO8"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="icons8-kitchen-room-96.png" width="96" height="96"/>
@@ -530,9 +521,6 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
