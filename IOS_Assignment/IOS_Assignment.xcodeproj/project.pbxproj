@@ -19,7 +19,7 @@
 		98337E0725ED6E4200C309D1 /* hr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 98337E0625ED6E4200C309D1 /* hr.jpg */; };
 		9849917225E2187500CD4C63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9849917125E2187500CD4C63 /* AppDelegate.swift */; };
 		9849917425E2187500CD4C63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9849917325E2187500CD4C63 /* SceneDelegate.swift */; };
-		9849917625E2187500CD4C63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9849917525E2187500CD4C63 /* ViewController.swift */; };
+		9849917625E2187500CD4C63 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9849917525E2187500CD4C63 /* LoginViewController.swift */; };
 		9849917925E2187500CD4C63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9849917725E2187500CD4C63 /* Main.storyboard */; };
 		9849917B25E2187500CD4C63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9849917A25E2187500CD4C63 /* Assets.xcassets */; };
 		9849917E25E2187500CD4C63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9849917C25E2187500CD4C63 /* LaunchScreen.storyboard */; };
@@ -48,7 +48,7 @@
 		9849916E25E2187500CD4C63 /* IOS_Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOS_Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9849917125E2187500CD4C63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9849917325E2187500CD4C63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9849917525E2187500CD4C63 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9849917525E2187500CD4C63 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9849917825E2187500CD4C63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9849917A25E2187500CD4C63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9849917D25E2187500CD4C63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -149,7 +149,7 @@
 		98990F7125EB5A60006E37DF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9849917525E2187500CD4C63 /* ViewController.swift */,
+				9849917525E2187500CD4C63 /* LoginViewController.swift */,
 				98990F7B25EB63FB006E37DF /* SignUpViewController.swift */,
 				98990F8625EB73D1006E37DF /* LocationViewController.swift */,
 				98337DF225ED0B7000C309D1 /* HomeViewController.swift */,
@@ -321,7 +321,7 @@
 				98990F9625EB8D09006E37DF /* LocationService.swift in Sources */,
 				98990F8725EB73D1006E37DF /* LocationViewController.swift in Sources */,
 				989709DB25F000CE00D1C0AB /* OrderViewController.swift in Sources */,
-				9849917625E2187500CD4C63 /* ViewController.swift in Sources */,
+				9849917625E2187500CD4C63 /* LoginViewController.swift in Sources */,
 				98337E0425ED656E00C309D1 /* FoodDetailViewController.swift in Sources */,
 				98337DF725ED0DB300C309D1 /* CartTableViewCell.swift in Sources */,
 				98337DF325ED0B7000C309D1 /* HomeViewController.swift in Sources */,
@@ -481,6 +481,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = IOS_Assignment/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -500,6 +501,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = IOS_Assignment/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -39,7 +39,29 @@ final class LocationService: NSObject {
     }
     
     func getLocation() {
-        manager.requestLocation()
+       
+        self.manager.requestAlwaysAuthorization()
+
+          // For use in foreground
+          self.manager.requestWhenInUseAuthorization()
+
+          if CLLocationManager.locationServicesEnabled() {
+            print("Request location update")
+            manager.delegate = self
+            manager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            manager.startUpdatingLocation()
+          }
+        
+        
+      //  manager.requestLocation()
+    }
+    
+    func checkIfLocationIsEnbled() -> Bool {
+        if CLLocationManager.locationServicesEnabled() {
+         return true
+        }else{
+            return false
+        }
     }
     
     func isLocationAccessEnabled() {

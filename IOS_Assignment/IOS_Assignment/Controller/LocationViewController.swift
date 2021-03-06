@@ -25,9 +25,16 @@ class LocationViewController: UIViewController {
         
     }
     
+    @IBAction func btnAllowLocation(_ sender: Any) {
+        let locationService=LocationService()
+        locationService.getLocation()
+      
+        var res=locationService.checkIfLocationIsEnbled()
+        print("loca res",res)
+    }
     override func viewDidAppear(_ animated: Bool) {
-        let location=LocationService()
-        location.isLocationAccessEnabled()
+//        let location=LocationService()
+//        location.isLocationAccessEnabled()
       
        // performSegue(withIdentifier: "mainSC", sender: self)
     }
