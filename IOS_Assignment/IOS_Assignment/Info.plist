@@ -29,6 +29,8 @@
 	<true/>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>We want to help you to find the nearst foods</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>We want to help you to find the nearst foods</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>We want to help you to find the nearst foods</string>
 	<key>UIApplicationSceneManifest</key>
@@ -67,11 +69,6 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
-	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationPortraitUpsideDown</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
+	<array/>
 </dict>
 </plist>

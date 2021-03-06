@@ -13,10 +13,11 @@ class LoginViewController: UIViewController {
    
     @IBOutlet var txt_un:UITextField!
     @IBOutlet var txt_pwd:UITextField!
+    let ls=LocationService()
 var isEnableLocation=false
     override func viewDidLoad() {
         super.viewDidLoad()
-        let ls=LocationService()
+       
         isEnableLocation=ls.checkIfLocationIsEnbled()
         // Do any additional setup after loading the view.
     }
@@ -26,48 +27,47 @@ var isEnableLocation=false
        performSegue(withIdentifier: "signupNavigator", sender: self)
     }
     @IBAction func btnLogin(_ sender: Any) {
+      //  print("status",ls.status.rawValue)
         
-        Auth.auth().signIn(withEmail: txt_un.text!, password: txt_pwd.text!) { [weak self] authResult, error in
-            guard let user = authResult?.user, error == nil else {
-                createAlert(title: "Error", message: error!.localizedDescription)
-                print(error)
-                           return
+        switch ls.status {
+        case .notDetermined, .restricted, .denied  : do {
+            self.performSegue(withIdentifier: "locationIdentifire", sender: self)
+        
+          break
                 }
-            self!.performSegue(withIdentifier: "homeIdentifire", sender: self)
-            
+        case .authorizedAlways, .authorizedWhenInUse:do {
+            self.performSegue(withIdentifier: "homeIdentifire", sender: self)
+          break
+        }
+             
         }
         
-        func createAlert(title:String, message:String){
-            let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
-        
-        
-        if isEnableLocation {
-            let email=txt_un.text!
-            let pwd=txt_pwd.text!
-            //start login
-          
-//            Auth.auth().createUser(withEmail:email , password: pwd) { authResult, error in
-//                       // [START_EXCLUDE]
-//                guard let strongSelf = self else { return }
-//                strongSelf.hideSpinner {
-//                         guard let user = authResult?.user, error == nil else {
-//                           strongSelf.showMessagePrompt(error!.localizedDescription)
+//        Auth.auth().signIn(withEmail: txt_un.text!, password: txt_pwd.text!) { [weak self] authResult, error in
+//            guard let user = authResult?.user, error == nil else {
+//                self!.createAlert(title: "Error", message: error!.localizedDescription)
+//                print(error)
 //                           return
-//                         }
-//                         print("\(user.email!) created")
-//                         strongSelf.navigationController?.popViewController(animated: true)
-//                       }
-//                       // [END_EXCLUDE]
-//                     }
-//            end login
-           // performSegue(withIdentifier: "homeIdentifire", sender: self)
-        }else{
-           // performSegue(withIdentifier: "locationIdentifire", sender: self)
-        }
+//                }
+//
+//            if self!.isEnableLocation {
+//                self!.performSegue(withIdentifier: "homeIdentifire", sender: self)
+//            }else{
+//                self!.performSegue(withIdentifier: "locationIdentifire", sender: self)
+//            }
+//
+//
+//        }
+        
+       
+      
     }
+    
+    func createAlert(title:String, message:String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     
 }
 
