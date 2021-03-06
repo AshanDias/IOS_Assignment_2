@@ -29,34 +29,29 @@ var isEnableLocation=false
     @IBAction func btnLogin(_ sender: Any) {
       //  print("status",ls.status.rawValue)
         
-        switch ls.status {
-        case .notDetermined, .restricted, .denied  : do {
-            self.performSegue(withIdentifier: "locationIdentifire", sender: self)
-        
-          break
+    
+        Auth.auth().signIn(withEmail: txt_un.text!, password: txt_pwd.text!) { [weak self] authResult, error in
+            guard let user = authResult?.user, error == nil else {
+                self!.createAlert(title: "Error", message: error!.localizedDescription)
+                print(error)
+                           return
                 }
-        case .authorizedAlways, .authorizedWhenInUse:do {
-            self.performSegue(withIdentifier: "homeIdentifire", sender: self)
-          break
+
+            switch self!.ls.status {
+            case .notDetermined, .restricted, .denied  : do {
+                self!.performSegue(withIdentifier: "locationIdentifire", sender: self)
+            
+              break
+                    }
+            case .authorizedAlways, .authorizedWhenInUse:do {
+                self!.performSegue(withIdentifier: "homeIdentifire", sender: self)
+              break
+                }
+                 
+            }
+            
+
         }
-             
-        }
-        
-//        Auth.auth().signIn(withEmail: txt_un.text!, password: txt_pwd.text!) { [weak self] authResult, error in
-//            guard let user = authResult?.user, error == nil else {
-//                self!.createAlert(title: "Error", message: error!.localizedDescription)
-//                print(error)
-//                           return
-//                }
-//
-//            if self!.isEnableLocation {
-//                self!.performSegue(withIdentifier: "homeIdentifire", sender: self)
-//            }else{
-//                self!.performSegue(withIdentifier: "locationIdentifire", sender: self)
-//            }
-//
-//
-//        }
         
        
       

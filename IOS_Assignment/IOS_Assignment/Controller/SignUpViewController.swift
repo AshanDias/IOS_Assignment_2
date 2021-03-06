@@ -14,7 +14,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet var txt_un:UITextField!
     @IBOutlet var txt_pwd:UITextField!
     @IBOutlet var txt_confirmPwd:UITextField!
-    
+    let ls=LocationService()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,6 +33,19 @@ class SignUpViewController: UIViewController {
                                return
                     }
                 self.performSegue(withIdentifier: "signupNavHome", sender: self)
+                
+                switch self.ls.status {
+                case .notDetermined, .restricted, .denied  : do {
+                    self.performSegue(withIdentifier: "locationIdentifire", sender: self)
+                
+                  break
+                        }
+                case .authorizedAlways, .authorizedWhenInUse:do {
+                    self.performSegue(withIdentifier: "signupNavHome", sender: self)
+                  break
+                    }
+                     
+                }
             }
         }else{
             self.createAlert(title: "Error", message: "Confirm password does not matched!")

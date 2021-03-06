@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -186,6 +187,7 @@
                         <outlet property="txt_pwd" destination="HTZ-ds-zy6" id="O4b-P2-dMH"/>
                         <outlet property="txt_un" destination="WMq-if-XhL" id="0fS-ZN-YDx"/>
                         <segue destination="mAq-6a-xyf" kind="show" identifier="signupNavHome" id="fJX-kf-SO8"/>
+                        <segue destination="VKa-TS-prj" kind="show" identifier="locationIdentifire" id="TBa-sC-VbB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hTr-d2-TgP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -504,7 +506,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2JA-y2-DY2"/>
+        <segue reference="fJX-kf-SO8"/>
+        <segue reference="TBa-sC-VbB"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="icons8-kitchen-room-96.png" width="96" height="96"/>
