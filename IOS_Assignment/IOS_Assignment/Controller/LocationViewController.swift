@@ -6,18 +6,37 @@
 //
 
 import UIKit
-class LocationViewController: UIViewController {
+import CoreLocation
+
+class LocationViewController: UIViewController,CLLocationManagerDelegate {
 
     @IBOutlet weak var locationButton: UIButton!
+    var locationManager : CLLocationManager?
+    let ls=LocationService()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        locationManager=CLLocationManager()
+        locationManager?.delegate=self
+        locationManager?.requestAlwaysAuthorization()
         setupButtonStyle();
         
-      
+        if ls.status == .authorizedAlways {
+            performSegue(withIdentifier: "mainSC", sender: self)
+        }
       
     }
     
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedAlways {
+           
+            if CLLocationManager.isMonitoringAvailable(for: CLBeaconRegion.self) {
+              
+                if CLLocationManager.isRangingAvailable() {
+                 
+                }
+            }
+        }
+    }
     
     func setupButtonStyle(){
     
@@ -30,7 +49,7 @@ class LocationViewController: UIViewController {
       //  locationService.getLocation()
         
       
-           locationService.getLocation()
+       //    locationService.getLocation()
            locationService.requestLocationAuthrization()
        
         performSegue(withIdentifier: "mainSC", sender: self)

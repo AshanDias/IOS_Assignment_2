@@ -62,14 +62,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>We need your location</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
+	<key>Privacy - Location When In Use Usage Description </key>
 	<string>We need your location</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>We need your location</string>
-	<key>NSLocationUsageDescription</key>
-	<string>We need your location</string>
+	<string></string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string></string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array/>
 </dict>

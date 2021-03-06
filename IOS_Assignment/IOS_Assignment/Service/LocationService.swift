@@ -34,7 +34,7 @@ final class LocationService: NSObject {
     
     func requestLocationAuthrization() {
        
-        manager.requestWhenInUseAuthorization()
+        manager.requestAlwaysAuthorization()
       
     }
     
@@ -43,7 +43,7 @@ final class LocationService: NSObject {
         self.manager.requestAlwaysAuthorization()
 
           // For use in foreground
-          self.manager.requestWhenInUseAuthorization()
+          self.manager.requestAlwaysAuthorization()
 
           if CLLocationManager.locationServicesEnabled() {
             print("Request location update")
