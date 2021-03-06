@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		430FD82233B6D42D02EF3851 /* Pods_IOS_Assignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D91942043B54F85CF3B641D9 /* Pods_IOS_Assignment.framework */; };
+		9805F61625F3862C00E9D41A /* pizza.png in Resources */ = {isa = PBXBuildFile; fileRef = 9805F61525F3862C00E9D41A /* pizza.png */; };
+		9805F61A25F3869100E9D41A /* french-fries.png in Resources */ = {isa = PBXBuildFile; fileRef = 9805F61925F3869100E9D41A /* french-fries.png */; };
+		9805F61D25F3869900E9D41A /* burger.png in Resources */ = {isa = PBXBuildFile; fileRef = 9805F61C25F3869900E9D41A /* burger.png */; };
+		9805F62025F387B700E9D41A /* healthy-eating.png in Resources */ = {isa = PBXBuildFile; fileRef = 9805F61F25F387B700E9D41A /* healthy-eating.png */; };
+		9805F62325F3884300E9D41A /* mutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9805F62225F3884300E9D41A /* mutton.png */; };
+		9805F62625F3884900E9D41A /* hot-dog.png in Resources */ = {isa = PBXBuildFile; fileRef = 9805F62525F3884900E9D41A /* hot-dog.png */; };
+		9805F62925F3892600E9D41A /* cake.png in Resources */ = {isa = PBXBuildFile; fileRef = 9805F62825F3892600E9D41A /* cake.png */; };
+		9805F62C25F3892B00E9D41A /* coffee-cup.png in Resources */ = {isa = PBXBuildFile; fileRef = 9805F62B25F3892B00E9D41A /* coffee-cup.png */; };
+		9805F62F25F3898400E9D41A /* cocktail.png in Resources */ = {isa = PBXBuildFile; fileRef = 9805F62E25F3898400E9D41A /* cocktail.png */; };
 		981051F225EF5C32000A2B2B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 981051F125EF5C32000A2B2B /* GoogleService-Info.plist */; };
 		98337DF325ED0B7000C309D1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98337DF225ED0B7000C309D1 /* HomeViewController.swift */; };
 		98337DF725ED0DB300C309D1 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98337DF525ED0DB300C309D1 /* CartTableViewCell.swift */; };
@@ -36,6 +45,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9805F61525F3862C00E9D41A /* pizza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pizza.png; sourceTree = "<group>"; };
+		9805F61925F3869100E9D41A /* french-fries.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "french-fries.png"; sourceTree = "<group>"; };
+		9805F61C25F3869900E9D41A /* burger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = burger.png; sourceTree = "<group>"; };
+		9805F61F25F387B700E9D41A /* healthy-eating.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "healthy-eating.png"; sourceTree = "<group>"; };
+		9805F62225F3884300E9D41A /* mutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mutton.png; sourceTree = "<group>"; };
+		9805F62525F3884900E9D41A /* hot-dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hot-dog.png"; sourceTree = "<group>"; };
+		9805F62825F3892600E9D41A /* cake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cake.png; sourceTree = "<group>"; };
+		9805F62B25F3892B00E9D41A /* coffee-cup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coffee-cup.png"; sourceTree = "<group>"; };
+		9805F62E25F3898400E9D41A /* cocktail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cocktail.png; sourceTree = "<group>"; };
 		981051F125EF5C32000A2B2B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		98337DF225ED0B7000C309D1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		98337DF525ED0DB300C309D1 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
@@ -88,9 +106,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9805F60525F3813900E9D41A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				9805F61525F3862C00E9D41A /* pizza.png */,
+				9805F61925F3869100E9D41A /* french-fries.png */,
+				9805F62225F3884300E9D41A /* mutton.png */,
+				9805F62525F3884900E9D41A /* hot-dog.png */,
+				9805F62825F3892600E9D41A /* cake.png */,
+				9805F61F25F387B700E9D41A /* healthy-eating.png */,
+				9805F62B25F3892B00E9D41A /* coffee-cup.png */,
+				9805F61C25F3869900E9D41A /* burger.png */,
+				9805F62E25F3898400E9D41A /* cocktail.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		9849916525E2187500CD4C63 = {
 			isa = PBXGroup;
 			children = (
+				9805F60525F3813900E9D41A /* Images */,
 				9849917025E2187500CD4C63 /* IOS_Assignment */,
 				9849916F25E2187500CD4C63 /* Products */,
 				F90A8AD1D5DB12CCEA96568D /* Pods */,
@@ -256,13 +291,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				9849917E25E2187500CD4C63 /* LaunchScreen.storyboard in Resources */,
+				9805F61625F3862C00E9D41A /* pizza.png in Resources */,
+				9805F62C25F3892B00E9D41A /* coffee-cup.png in Resources */,
 				98990F7425EB5D87006E37DF /* icons8-kitchen-room-96.png in Resources */,
 				98337DF825ED0DB300C309D1 /* CartTableViewCell.xib in Resources */,
+				9805F62F25F3898400E9D41A /* cocktail.png in Resources */,
+				9805F62325F3884300E9D41A /* mutton.png in Resources */,
+				9805F62025F387B700E9D41A /* healthy-eating.png in Resources */,
 				9849917B25E2187500CD4C63 /* Assets.xcassets in Resources */,
 				989709E125F0054600D1C0AB /* OrderTableViewCell.xib in Resources */,
 				98337E0725ED6E4200C309D1 /* hr.jpg in Resources */,
 				98990F8A25EB780F006E37DF /* layer-211@2x.png in Resources */,
+				9805F61A25F3869100E9D41A /* french-fries.png in Resources */,
+				9805F62925F3892600E9D41A /* cake.png in Resources */,
+				9805F62625F3884900E9D41A /* hot-dog.png in Resources */,
 				9849917925E2187500CD4C63 /* Main.storyboard in Resources */,
+				9805F61D25F3869900E9D41A /* burger.png in Resources */,
 				981051F225EF5C32000A2B2B /* GoogleService-Info.plist in Resources */,
 				98337E0025ED229D00C309D1 /* FoodsTableViewCell.xib in Resources */,
 				98990F7F25EB71FC006E37DF /* pin2x-1.png in Resources */,

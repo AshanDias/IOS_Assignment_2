@@ -30,9 +30,10 @@ class LocationViewController: UIViewController {
       //  locationService.getLocation()
         
       
-           // locationService.getLocation()
-            locationService.requestLocationAuthrization()
-            performSegue(withIdentifier: "mainSC", sender: self)
+           locationService.getLocation()
+           locationService.requestLocationAuthrization()
+       
+        performSegue(withIdentifier: "mainSC", sender: self)
  
         
     }

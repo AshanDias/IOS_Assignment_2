@@ -16,10 +16,15 @@ var cartCount = -1
 ]
 
 let foodItem: [FoodItem] = [
-FoodItem(foodImage: #imageLiteral(resourceName: "icons8-kitchen-room-96.png"), foodName: "Burger 1", foodDescription: "Burger 1 Description", foodPrice: 150),
-FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250),
-FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"), foodName: "Burger 3", foodDescription: "Burger 3 Description", foodPrice: 350),
-FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250),   FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250),   FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250),   FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250),   FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250),   FoodItem(foodImage: #imageLiteral(resourceName: "pin2x-1.png"),foodName: "Burger 2", foodDescription: "Burger 2 Description", foodPrice: 250)
+    FoodItem(foodImage:#imageLiteral(resourceName: "burger.png") , foodName: "Burger", foodDescription: "Lorem Ipsum is simply dummy text", foodPrice: 150),
+    FoodItem(foodImage:#imageLiteral(resourceName: "french-fries.png") ,foodName: "French-Fries", foodDescription: "Lorem Ipsum is simply dummy text", foodPrice: 250),
+    FoodItem(foodImage: #imageLiteral(resourceName: "pizza.png"), foodName: "Pizza", foodDescription: "Lorem Ipsum is simply dummy text", foodPrice: 350),
+    FoodItem(foodImage:#imageLiteral(resourceName: "healthy-eating.png") ,foodName: "Rice", foodDescription: "Lorem Ipsum is simply dummy text", foodPrice: 250),
+    FoodItem(foodImage:#imageLiteral(resourceName: "mutton.png") ,foodName: "Drumstick", foodDescription: "Lorem Ipsum is simply dummy text", foodPrice: 250),
+    FoodItem(foodImage:#imageLiteral(resourceName: "hot-dog.png") ,foodName: "Hot-Dog", foodDescription: "Lorem Ipsum is simply dummy text", foodPrice: 250),
+    FoodItem(foodImage:#imageLiteral(resourceName: "cake.png") ,foodName: "Cake", foodDescription: "Lorem Ipsum is simply dummy text", foodPrice: 250),
+    FoodItem(foodImage: #imageLiteral(resourceName: "coffee-cup.png") ,foodName: "Coffe", foodDescription: "Lorem Ipsum is simply dummy text", foodPrice: 250),
+    FoodItem(foodImage: #imageLiteral(resourceName: "cocktail.png"),foodName: "Cocktail Juice", foodDescription: "Lorem Ipsum is simply dummy text", foodPrice: 250)
 
 ]
 
