@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="58w-jo-6mD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -308,31 +308,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cart.png" translatesAutoresizingMaskIntoConstraints="NO" id="Pqx-rM-Qa5">
-                                <rect key="frame" x="275" y="20" width="80" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="6t6-rQ-L1p"/>
-                                    <constraint firstAttribute="width" constant="70" id="oJk-Oy-MBK"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cart.badge.minus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Pqx-rM-Qa5">
+                                <rect key="frame" x="266" y="20" width="89" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0k-Fx-OUT">
-                                <rect key="frame" x="280" y="25" width="71" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="g93-rV-bHS"/>
-                                    <constraint firstAttribute="width" constant="71" id="lpm-Nd-F1h"/>
-                                </constraints>
-                                <state key="normal">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ixq-ir-Epz">
+                                <rect key="frame" x="273" y="27" width="74" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="btn_clearCart:" destination="58w-jo-6mD" eventType="touchUpInside" id="zK6-L8-b0B"/>
+                                    <action selector="btn_clearCart:" destination="58w-jo-6mD" eventType="touchUpInside" id="Bwf-dU-9XD"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P76-4r-HEF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="P76-4r-HEF" firstAttribute="trailing" secondItem="r0k-Fx-OUT" secondAttribute="trailing" constant="45" id="0N8-iV-BtV"/>
                             <constraint firstItem="P76-4r-HEF" firstAttribute="trailing" secondItem="Kwk-wL-YXH" secondAttribute="trailing" constant="39" id="1d0-a4-9lS"/>
                             <constraint firstItem="P76-4r-HEF" firstAttribute="trailing" secondItem="tm8-dO-4pd" secondAttribute="trailing" constant="20" id="5C8-7h-5zL"/>
                             <constraint firstItem="Eaq-VK-IFm" firstAttribute="centerY" secondItem="akn-XG-ys9" secondAttribute="centerY" id="5oF-9H-Xdv"/>
@@ -341,16 +331,13 @@
                             <constraint firstItem="P76-4r-HEF" firstAttribute="bottom" secondItem="Kwk-wL-YXH" secondAttribute="bottom" constant="50" id="86f-jI-zCZ"/>
                             <constraint firstItem="01I-39-XoG" firstAttribute="top" secondItem="P76-4r-HEF" secondAttribute="top" constant="79" id="9Xs-GC-zSy"/>
                             <constraint firstItem="P76-4r-HEF" firstAttribute="trailing" secondItem="Eaq-VK-IFm" secondAttribute="trailing" constant="20" id="CdV-Wp-ofO"/>
-                            <constraint firstItem="r0k-Fx-OUT" firstAttribute="top" secondItem="P76-4r-HEF" secondAttribute="top" constant="29" id="MDD-N1-R9b"/>
                             <constraint firstItem="Kwk-wL-YXH" firstAttribute="top" secondItem="tm8-dO-4pd" secondAttribute="bottom" constant="30" id="OgX-GR-ycu"/>
                             <constraint firstItem="Kwk-wL-YXH" firstAttribute="top" secondItem="tm8-dO-4pd" secondAttribute="bottom" constant="30" id="TKY-wz-gYf"/>
                             <constraint firstItem="01I-39-XoG" firstAttribute="leading" secondItem="bSJ-IB-77v" secondAttribute="trailing" constant="44" id="TLQ-Nw-JzV"/>
                             <constraint firstItem="P76-4r-HEF" firstAttribute="bottom" secondItem="Eaq-VK-IFm" secondAttribute="bottom" constant="235" id="ffk-0K-VoL"/>
                             <constraint firstItem="bSJ-IB-77v" firstAttribute="leading" secondItem="P76-4r-HEF" secondAttribute="leading" constant="20" id="myV-Lt-6Mc"/>
-                            <constraint firstItem="P76-4r-HEF" firstAttribute="trailing" secondItem="Pqx-rM-Qa5" secondAttribute="trailing" constant="20" id="npX-PD-GRt"/>
                             <constraint firstItem="Y3Q-yC-6aL" firstAttribute="top" secondItem="01I-39-XoG" secondAttribute="bottom" constant="10.5" id="pe2-HV-fJ3"/>
                             <constraint firstItem="Eaq-VK-IFm" firstAttribute="top" secondItem="bSJ-IB-77v" secondAttribute="bottom" constant="80" id="quV-ym-l5a"/>
-                            <constraint firstItem="Pqx-rM-Qa5" firstAttribute="top" secondItem="P76-4r-HEF" secondAttribute="top" constant="20" id="yCW-D6-Jtc"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="OQ8-fl-C6p"/>
@@ -358,6 +345,7 @@
                     <connections>
                         <outlet property="lbl_total" destination="Kwk-wL-YXH" id="L4v-Eb-hwN"/>
                         <outlet property="tbl_orderCart" destination="Eaq-VK-IFm" id="B8W-0B-MJP"/>
+                        <segue destination="mAq-6a-xyf" kind="show" identifier="mainViewNav" id="gSR-3s-JFw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bKx-4Z-9tz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -530,11 +518,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sCg-1M-6yM"/>
-        <segue reference="guA-5T-1Il"/>
+        <segue reference="sIb-cj-WsU"/>
+        <segue reference="gSR-3s-JFw"/>
+        <segue reference="TBa-sC-VbB"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="cart.png" width="418.90908813476562" height="418.90908813476562"/>
+        <image name="cart.badge.minus" catalog="system" width="128" height="106"/>
         <image name="icons8-kitchen-room-96.png" width="96" height="96"/>
         <image name="layer-211.png" width="492" height="204.5"/>
         <image name="pin2x-1.png" width="188" height="176"/>

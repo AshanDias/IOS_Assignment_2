@@ -132,7 +132,9 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
         refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
           print("Handle Ok logic here")
             //delete forebase items
-            
+            self.database.child("Cart").removeValue()
+            isDelete=1
+            self.performSegue(withIdentifier: "mainViewNav", sender: self)
           }))
 
         refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
@@ -140,6 +142,7 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
           }))
 
         present(refreshAlert, animated: true, completion: nil)
+     
     }
     
     /*

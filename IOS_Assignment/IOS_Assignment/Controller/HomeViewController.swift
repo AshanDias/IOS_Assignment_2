@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 var currentIndex=0
 var cartCount = -1
-
+var isDelete=0
 
  var cartItems: [Cart] = [
    
@@ -213,10 +213,16 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     override func viewDidAppear(_ animated: Bool) {
         
+        if isDelete==1 {
+            cartItems.removeAll()
+            tbl_cart.reloadData()
+            isDelete=0
+        }
+        
         while(true){
             
             if cartItems.count > 0 || cartCount == 0{
-            
+            print("awa")
                 tbl_cart.reloadData()
                 tbl_cart.backgroundView=nil
                 btn_order.isHidden=false
