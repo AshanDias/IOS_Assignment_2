@@ -118,7 +118,7 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell=tableView.dequeueReusableCell(withIdentifier: "OrderTableViewCell", for: indexPath) as! OrderTableViewCell
       
-       
+       print("A")
         cell.setupView(cart: cartData[indexPath.row])
        
 
@@ -126,7 +126,22 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
     }
    
 
-  
+    @IBAction func btn_clearCart(_ sender: Any) {
+        var refreshAlert = UIAlertController(title: "Clear Cart", message: "All data will be lost.", preferredStyle: UIAlertController.Style.alert)
+
+        refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+          print("Handle Ok logic here")
+            //delete forebase items
+            
+          }))
+
+        refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+          print("Handle Cancel Logic here")
+          }))
+
+        present(refreshAlert, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

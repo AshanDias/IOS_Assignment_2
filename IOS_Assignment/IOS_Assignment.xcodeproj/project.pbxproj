@@ -42,6 +42,7 @@
 		98990F8A25EB780F006E37DF /* layer-211@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 98990F8925EB780F006E37DF /* layer-211@2x.png */; };
 		98990F9625EB8D09006E37DF /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98990F9525EB8D09006E37DF /* LocationService.swift */; };
 		98990F9E25EB9D26006E37DF /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98990F9D25EB9D26006E37DF /* Cart.swift */; };
+		98E6F2B225F5288200950511 /* cart.png in Resources */ = {isa = PBXBuildFile; fileRef = 98E6F2B125F5288200950511 /* cart.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +82,7 @@
 		98990F8925EB780F006E37DF /* layer-211@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "layer-211@2x.png"; sourceTree = "<group>"; };
 		98990F9525EB8D09006E37DF /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		98990F9D25EB9D26006E37DF /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
+		98E6F2B125F5288200950511 /* cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cart.png; sourceTree = "<group>"; };
 		D3122F9D4DB77C72BBD873B6 /* Pods-IOS_Assignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOS_Assignment.release.xcconfig"; path = "Target Support Files/Pods-IOS_Assignment/Pods-IOS_Assignment.release.xcconfig"; sourceTree = "<group>"; };
 		D91942043B54F85CF3B641D9 /* Pods_IOS_Assignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOS_Assignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0A1EAB5E4C9EB130ABA871D /* Pods-IOS_Assignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOS_Assignment.debug.xcconfig"; path = "Target Support Files/Pods-IOS_Assignment/Pods-IOS_Assignment.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				9805F62B25F3892B00E9D41A /* coffee-cup.png */,
 				9805F61C25F3869900E9D41A /* burger.png */,
 				9805F62E25F3898400E9D41A /* cocktail.png */,
+				98E6F2B125F5288200950511 /* cart.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				98990F8A25EB780F006E37DF /* layer-211@2x.png in Resources */,
 				9805F61A25F3869100E9D41A /* french-fries.png in Resources */,
 				9805F62925F3892600E9D41A /* cake.png in Resources */,
+				98E6F2B225F5288200950511 /* cart.png in Resources */,
 				9805F62625F3884900E9D41A /* hot-dog.png in Resources */,
 				9849917925E2187500CD4C63 /* Main.storyboard in Resources */,
 				9805F61D25F3869900E9D41A /* burger.png in Resources */,
