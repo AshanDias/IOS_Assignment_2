@@ -54,6 +54,7 @@ class FoodDetailViewController: UIViewController {
     
     
     @IBAction func btn_back(_ sender: Any) {
+        cartItems.removeAll()
         dismiss(animated: true, completion: nil)
     }
     /*

@@ -37,7 +37,25 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
     }
     
     @IBAction func checkout(_ sender: Any) {
-//        print(<#T##items: Any...##Any#>)
+       
+        
+        let user=Auth.auth().currentUser?.uid ?? ""
+        var a=0
+        for var items in cartData {
+            a+=1
+         
+            items.status = 1
+            
+            let cartArray=items.getJSON()
+            print("aaa",cartArray)
+            self.database.child("Orders").child(user).child(String(a)).setValue(cartArray)
+        }
+        
+        self.database.child("Cart").removeValue()
+        cartItems.removeAll()
+        cartData.removeAll()
+        self.performSegue(withIdentifier: "mainViewNav", sender: self)
+       
     }
     
    
@@ -62,7 +80,7 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
               
                     self.cartData.append(cart)
                     
-                })// print("Got data",snapshot.value!)
+                }) // print("Got data",snapshot.value!)
             } else {
                 
                 count = 0

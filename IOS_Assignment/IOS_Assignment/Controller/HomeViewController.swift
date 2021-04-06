@@ -75,6 +75,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     
     func  LoadCart(){
+       
         self.displayWaitCart()
         let group = DispatchGroup()
         
@@ -167,6 +168,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     override func viewWillAppear(_ animated: Bool) {
         
 //        self.displayWaitCart()
+        //cartItems.removeAll()
         self.LoadCart()
        
     }
