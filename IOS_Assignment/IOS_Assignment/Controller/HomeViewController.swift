@@ -42,7 +42,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         styleButton()
-        
+      
         let nib=UINib(nibName: "CartTableViewCell", bundle: nil)
         tbl_cart.register(nib, forCellReuseIdentifier: "CartTableViewCell")
             
@@ -55,13 +55,14 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         tbl_foods.delegate=self
         tbl_foods.dataSource=self
        
-        DispatchQueue.main.async {
+//        DispatchQueue.main.async {
             
-           
-            self.LoadCart()
-            
-            self.displayTableView()
-        }
+//
+           // self.LoadCart()
+//
+//            self.displayTableView()
+//            self.tbl_cart.reloadData()
+//         }
         
       
         
@@ -71,12 +72,16 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         // Do any additional setup after loading the view.
     }
     
-    func LoadCart(){
-        
+    
+    
+    func  LoadCart(){
+        self.displayWaitCart()
+        let group = DispatchGroup()
         
         self.database.child("Cart").getData { (error, snapshot) in
             if let error = error {
                 print("Error getting data \(error)")
+               
             }
             else if snapshot.exists() {
                 
@@ -84,20 +89,28 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
               
                 
               
-                
+                group.wait()
+               
                 dataChange.forEach({ (key,val) in
                    
                     let cart = Cart(item: val["item"] as! String, price: val["price"] as! String, unit: val["unit"] as! Int, id: val["id"] as! String? )
                     
                 
                     cartItems.append(cart)
-                    
+                  
                 })
+                
               
+                
+                group.notify(queue: .main) {
+                        // do something here when loop finished
+                    self.displayTableView()
+                    self.tbl_cart.reloadData()
+                }
                // print("Got data",snapshot.value!)
             }
             else {
-               
+              
                 cartCount = 0
                 
             }
@@ -105,7 +118,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
            
             
         }
-       
+        self.displayTableView()
     }
    
     
@@ -153,14 +166,25 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     override func viewWillAppear(_ animated: Bool) {
         
-       
-        displayTableView()
+//        self.displayWaitCart()
+        self.LoadCart()
        
     }
     
     func displayNoDataTagOnCart(){
         let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
                messageLabel.text = "No Records Found !"
+               messageLabel.textColor = .black
+               messageLabel.numberOfLines = 0
+               messageLabel.textAlignment = .center
+               messageLabel.font = UIFont(name: "TrebuchetMS", size: 15)
+               messageLabel.sizeToFit()
+        tbl_cart.backgroundView = messageLabel
+        
+    }
+    func displayWaitCart(){
+        let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+               messageLabel.text = "Please wait loading...!"
                messageLabel.textColor = .black
                messageLabel.numberOfLines = 0
                messageLabel.textAlignment = .center
@@ -197,6 +221,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             tbl_foods.backgroundColor=nil
         }else{
             displayNoDataTagOnFood()
+            btn_order.isHidden=true
         }
        
     }
@@ -219,22 +244,22 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             isDelete=0
         }
         
-        while(true){
-            
-            if cartItems.count > 0 || cartCount == 0{
-            print("awa")
-                tbl_cart.reloadData()
-                tbl_cart.backgroundView=nil
-                btn_order.isHidden=false
-                if cartItems.count == 0 {
-                    displayNoDataTagOnCart()
-                    btn_order.isHidden=true
-                }
-              
-                break
-            }
-            
-        }
+//        while(true){
+//
+//            if cartItems.count > 0 || cartCount == 0{
+//
+//                tbl_cart.reloadData()
+//                tbl_cart.backgroundView=nil
+//                btn_order.isHidden=false
+//                if cartItems.count == 0 {
+//                    displayNoDataTagOnCart()
+//                    btn_order.isHidden=true
+//                }
+//
+//                break
+//            }
+//
+//        }
         
        
     }

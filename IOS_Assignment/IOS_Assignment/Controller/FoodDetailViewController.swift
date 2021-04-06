@@ -42,7 +42,7 @@ class FoodDetailViewController: UIViewController {
        
        
         let child="Item\(Int.random(in: 1...100))"
-        cartItems.append(Cart(item: res.foodName, price: String(res.foodPrice), unit: 0,id: child))
+        //cartItems.append(Cart(item: res.foodName, price: String(res.foodPrice), unit: 0,id: child))
         let cart =  Cart(item: res.foodName, price: String(res.foodPrice), unit: 0,id: child)
         
         let cartArray=cart.getJSON()

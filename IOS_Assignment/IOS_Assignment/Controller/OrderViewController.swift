@@ -36,7 +36,10 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
         // Do any additional setup after loading the view.
     }
     
-   
+    @IBAction func checkout(_ sender: Any) {
+//        print(<#T##items: Any...##Any#>)
+    }
+    
    
     func LoadCart(){
         
@@ -74,7 +77,7 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
     
     
     override func viewDidAppear(_ animated: Bool) {
-        while(true){
+//        while(true){
             
             if cartData.count > 0 || count == 0{
             
@@ -83,10 +86,10 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
               
               
               
-                break
+//                break
             }
             
-        }
+//        }
         calculateTotalValue()
       
 
