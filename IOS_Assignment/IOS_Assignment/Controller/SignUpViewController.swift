@@ -38,7 +38,7 @@ class SignUpViewController: UIViewController {
                 case .notDetermined, .restricted, .denied  : do {
                     self.performSegue(withIdentifier: "locationIdentifire", sender: self)
                 
-                  break
+                  break 
                         }
                 case .authorizedAlways, .authorizedWhenInUse:do {
                     self.performSegue(withIdentifier: "signupNavHome", sender: self)

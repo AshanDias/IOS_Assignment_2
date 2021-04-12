@@ -115,9 +115,6 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                 cartCount = 0
                 
             }
-            
-           
-            
         }
         self.displayTableView()
     }

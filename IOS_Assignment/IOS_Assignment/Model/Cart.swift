@@ -15,6 +15,7 @@ struct Cart {
     var unit : Int
     var id : String!
     var status : Int!
+    var userName:String!
     func getJSON() -> NSMutableDictionary {
            let dict = NSMutableDictionary()
            dict.setValue(item, forKey: "item")
@@ -22,6 +23,7 @@ struct Cart {
             dict.setValue(unit, forKey: "unit")
             dict.setValue(id, forKey: "id")
             dict.setValue(status, forKey: "status")
+            dict.setValue(userName, forKey: "userName")
            return dict
        }
 //    mutating func initWithDict(aDict: [String: AnyObject]) {

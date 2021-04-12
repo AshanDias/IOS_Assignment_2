@@ -40,22 +40,25 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
        
         
         let user=Auth.auth().currentUser?.uid ?? ""
+        var uName=Auth.auth().currentUser?.email ?? ""
+        uName = uName.replacingOccurrences(of: ".", with: ",")
+       
         var a=0
         for var items in cartData {
             a+=1
-         
+
             items.status = 1
-            
+            items.userName = uName
             let cartArray=items.getJSON()
-            print("aaa",cartArray)
+           
             self.database.child("Orders").child(user).child(String(a)).setValue(cartArray)
         }
-        
+
         self.database.child("Cart").removeValue()
         cartItems.removeAll()
         cartData.removeAll()
         self.performSegue(withIdentifier: "mainViewNav", sender: self)
-       
+//
     }
     
    
