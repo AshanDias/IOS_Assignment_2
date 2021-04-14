@@ -39,24 +39,48 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
     @IBAction func checkout(_ sender: Any) {
        
         
+        
         let user=Auth.auth().currentUser?.uid ?? ""
         var uName=Auth.auth().currentUser?.email ?? ""
         uName = uName.replacingOccurrences(of: ".", with: ",")
-       
         var a=0
-        for var items in cartData {
-            a+=1
+        let group2 = DispatchGroup()
+        self.database.child("Orders").child(user).observe(DataEventType.value, with: { (snapshot) in
+//            print(snapshot.childrenCount)
+            group2.wait()
+            a=Int(snapshot.childrenCount)
+            
+            
+            group2.notify(queue: .main){
+                
+                let today = Date()
+                let formatter1 = DateFormatter()
+                formatter1.dateStyle = .short
+                var date=formatter1.string(from: today)
+                
+                for var items in self.cartData {
+                    a+=1
 
-            items.status = 1
-            items.userName = uName
-            let cartArray=items.getJSON()
-           
-            self.database.child("Orders").child(user).child(String(a)).setValue(cartArray)
-        }
+                    items.status = 1
+                    items.userName = uName
+                    items.tel = 0773223282
+                    items.date = date
+                    
+                    let cartArray=items.getJSON()
+//                   print(cartArray)
+                    self.database.child("Orders").child(user).child(String(a)).setValue(cartArray)
+                }
+                
+                self.database.child("Cart").removeValue()
+                cartItems.removeAll()
+                self.cartData.removeAll()
+            }
+          })
+        
+        
+      
 
-        self.database.child("Cart").removeValue()
-        cartItems.removeAll()
-        cartData.removeAll()
+       
         self.performSegue(withIdentifier: "mainViewNav", sender: self)
 //
     }
