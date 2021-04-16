@@ -7,11 +7,13 @@
 
 import UIKit
 import Firebase
+
+
 var count = -1
 class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
    
     private let database = Database.database().reference()
-    
+    private let manager = LocationService()
     
     var cartData: [Cart] = [
       
@@ -52,10 +54,10 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
             
             
             group2.notify(queue: .main){
-                
+                var location = self.manager.getLongAndLatitude()
                 let today = Date()
                 let formatter1 = DateFormatter()
-                formatter1.dateStyle = .short
+                formatter1.dateFormat = "MM/dd/YY"
                 var date=formatter1.string(from: today)
                 
                 for var items in self.cartData {
@@ -65,8 +67,11 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
                     items.userName = uName
                     items.tel = 0773223282
                     items.date = date
+                    items.longtude = location.longtude
+                    items.latitude = location.latitude
                     
                     let cartArray=items.getJSON()
+                    
 //                   print(cartArray)
                     self.database.child("Orders").child(user).child(String(a)).setValue(cartArray)
                 }

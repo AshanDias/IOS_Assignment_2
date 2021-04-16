@@ -56,6 +56,16 @@ final class LocationService: NSObject {
       //  manager.requestLocation()
     }
     
+    func getLongAndLatitude() -> locationData {
+        
+        let longt = Double((manager.location?.coordinate.longitude)!)
+        let lat = Double((manager.location?.coordinate.latitude)!)
+        
+        let data = locationData.init(longtude: longt, latitude: lat)
+        
+        return data
+    }
+    
     func checkIfLocationIsEnbled() -> Bool {
         if CLLocationManager.locationServicesEnabled() {
          return true
