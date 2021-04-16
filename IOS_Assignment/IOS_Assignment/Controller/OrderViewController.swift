@@ -7,13 +7,16 @@
 
 import UIKit
 import Firebase
-
+import CoreLocation
 
 var count = -1
-class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
-   
+class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource,CLLocationManagerDelegate{
+    
+    let locationManager = CLLocationManager()
+    var lt=0.00
+    var lat=0.00
     private let database = Database.database().reference()
-    private let manager = LocationService()
+//    private let manager = LocationService()
     
     var cartData: [Cart] = [
       
@@ -25,7 +28,14 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        locationManager.requestAlwaysAuthorization()
+               locationManager.requestWhenInUseAuthorization()
+               if CLLocationManager.locationServicesEnabled() {
+                   locationManager.delegate = self
+                  
+                   locationManager.startUpdatingLocation()
+               }
+        
         let nib=UINib(nibName: "OrderTableViewCell", bundle: nil)
         tbl_orderCart.register(nib, forCellReuseIdentifier: "OrderTableViewCell")
         
@@ -37,6 +47,13 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
        
         // Do any additional setup after loading the view.
     }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+            guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+            print("locations = \(locValue.latitude) \(locValue.longitude)")
+        self.lt=locValue.longitude
+        self.lat=locValue.latitude
+        }
     
     @IBAction func checkout(_ sender: Any) {
        
@@ -54,7 +71,7 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
             
             
             group2.notify(queue: .main){
-                var location = self.manager.getLongAndLatitude()
+//                var location = self.manager.getLongAndLatitude()
                 let today = Date()
                 let formatter1 = DateFormatter()
                 formatter1.dateFormat = "MM/dd/YY"
@@ -67,8 +84,8 @@ class OrderViewController: UIViewController ,UITableViewDelegate,UITableViewData
                     items.userName = uName
                     items.tel = 0773223282
                     items.date = date
-                    items.longtude = location.longtude
-                    items.latitude = location.latitude
+                    items.longtude = self.lt
+                    items.latitude = self.lat
                     
                     let cartArray=items.getJSON()
                     
