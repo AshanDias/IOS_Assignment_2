@@ -22,6 +22,12 @@ final class LocationService: NSObject {
         super.init()
         
         manager.delegate = self
+        
+        manager.distanceFilter = 1
+              manager.requestAlwaysAuthorization()
+              manager.requestWhenInUseAuthorization()
+              manager.desiredAccuracy = 1
+        
     }
  
     
