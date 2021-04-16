@@ -27,6 +27,8 @@ final class LocationService: NSObject {
               manager.requestAlwaysAuthorization()
               manager.requestWhenInUseAuthorization()
               manager.desiredAccuracy = 1
+        manager.startUpdatingLocation()
+        manager.stopUpdatingLocation()
         
     }
  
